@@ -3,6 +3,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  --breakpoint-xxs: 20rem; /* 320px */
+  --breakpoint-xs: 24rem;  /* 384px */
+  
   --color-primary: #533afd;
   --color-primary-deep: #4434d4;
   --color-primary-press: #2e2b8c;

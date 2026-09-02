@@ -1,19 +1,19 @@
 ---
 ---
 
-<footer class="bg-[var(--color-canvas)] border-t border-[var(--color-hairline)] text-[var(--color-ink-mute)] text-xs py-16">
+<footer class="bg-[var(--color-canvas)] border-t border-[var(--color-hairline)] text-[var(--color-ink-mute)] text-xs py-10 sm:py-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-10 sm:mb-12">
       
       <!-- Brand & Mission Column -->
-      <div class="lg:col-span-2 space-y-4">
+      <div class="col-span-1 sm:col-span-2 lg:col-span-2 space-y-4">
         <a href="/" class="flex items-center gap-2 text-decoration-none">
-          <div class="w-8 h-8 rounded-full bg-[var(--color-brand-dark-900)] flex items-center justify-center text-white font-semibold text-base">
-            W<span class="text-[var(--color-primary)] font-bold">.</span>
+          <div class="w-8 h-8 rounded-full bg-[var(--color-brand-dark-900)] dark:bg-[var(--color-primary)] flex items-center justify-center text-white font-semibold text-base">
+            W<span class="text-[var(--color-primary)] dark:text-white font-bold">.</span>
           </div>
           <span class="text-xl font-light tracking-tight text-[var(--color-ink)]">
-            We <span class="font-normal text-[var(--color-brand-dark-900)]">Destine</span>
+            We <span class="font-normal text-[var(--color-brand-dark-900)] dark:text-white">Destine</span>
           </span>
         </a>
 
@@ -21,51 +21,49 @@
           Transforming healthcare operations through intelligent revenue cycle management. We partner with medical practices, hospitals, and healthcare organizations to accelerate collections and reduce denials.
         </p>
 
-        <div class="flex items-center gap-3 font-mono text-[11px] text-[var(--color-ink-mute)]">
+        <div class="flex items-center gap-3 font-mono text-[11px] text-[var(--color-ink-mute)] flex-wrap">
           <span>Domain: <strong class="text-[var(--color-ink)]">wedestine.com</strong></span>
           <span>•</span>
-          <span class="text-emerald-600 font-semibold">HIPAA Verified</span>
+          <span class="text-emerald-600 dark:text-emerald-400 font-semibold">HIPAA Verified</span>
         </div>
       </div>
 
       <!-- Solutions Column -->
       <div>
-        <h4 class="font-medium text-xs uppercase tracking-wider text-[var(--color-ink)] mb-4">
+        <h4 class="font-medium text-xs uppercase tracking-wider text-[var(--color-ink)] mb-3 sm:mb-4">
           RCM Solutions
         </h4>
-        <ul class="space-y-2.5 font-light">
+        <ul class="space-y-2 font-light">
           <li><a href="/medical-rcm" class="hover:text-[var(--color-primary)] transition-colors">Medical RCM</a></li>
           <li><a href="/dental-rcm" class="hover:text-[var(--color-primary)] transition-colors">Dental & DSO RCM</a></li>
-          <li><a href="#workflow" class="hover:text-[var(--color-primary)] transition-colors">Medical Billing</a></li>
-          <li><a href="#workflow" class="hover:text-[var(--color-primary)] transition-colors">AI Medical Coding</a></li>
-          <li><a href="#workflow" class="hover:text-[var(--color-primary)] transition-colors">Denial Resolution Engine</a></li>
-          <li><a href="#workflow" class="hover:text-[var(--color-primary)] transition-colors">Medical Credentialing</a></li>
+          <li><a href="/#workflow" class="hover:text-[var(--color-primary)] transition-colors">Medical Billing</a></li>
+          <li><a href="/#workflow" class="hover:text-[var(--color-primary)] transition-colors">AI Medical Coding</a></li>
+          <li><a href="/#workflow" class="hover:text-[var(--color-primary)] transition-colors">Denial Resolution</a></li>
         </ul>
       </div>
 
       <!-- Technology Column -->
       <div>
-        <h4 class="font-medium text-xs uppercase tracking-wider text-[var(--color-ink)] mb-4">
+        <h4 class="font-medium text-xs uppercase tracking-wider text-[var(--color-ink)] mb-3 sm:mb-4">
           Technology
         </h4>
-        <ul class="space-y-2.5 font-light">
-          <li><a href="#integrations" class="hover:text-[var(--color-primary)] transition-colors">EHR Integration Engine</a></li>
-          <li><a href="#calculator" class="hover:text-[var(--color-primary)] transition-colors">Revenue ROI Calculator</a></li>
-          <li><a href="#workflow" class="hover:text-[var(--color-primary)] transition-colors">Claim Scrubber AI</a></li>
-          <li><a href="#workflow" class="hover:text-[var(--color-primary)] transition-colors">Patient Billing Portal</a></li>
-          <li><a href="#workflow" class="hover:text-[var(--color-primary)] transition-colors">Executive Command Center</a></li>
+        <ul class="space-y-2 font-light">
+          <li><a href="/#integrations" class="hover:text-[var(--color-primary)] transition-colors">EHR Integration</a></li>
+          <li><a href="/#calculator" class="hover:text-[var(--color-primary)] transition-colors">ROI Calculator</a></li>
+          <li><a href="/#workflow" class="hover:text-[var(--color-primary)] transition-colors">Claim Scrubber AI</a></li>
+          <li><a href="/#workflow" class="hover:text-[var(--color-primary)] transition-colors">Patient Billing Portal</a></li>
         </ul>
       </div>
 
       <!-- Company Column -->
       <div>
-        <h4 class="font-medium text-xs uppercase tracking-wider text-[var(--color-ink)] mb-4">
+        <h4 class="font-medium text-xs uppercase tracking-wider text-[var(--color-ink)] mb-3 sm:mb-4">
           Company & Contact
         </h4>
-        <ul class="space-y-2.5 font-light">
+        <ul class="space-y-2 font-light">
           <li><a href="/about" class="hover:text-[var(--color-primary)] transition-colors">About We Destine</a></li>
-          <li><a href="/contact" class="hover:text-[var(--color-primary)] transition-colors">Contact Sales & Support</a></li>
-          <li><a href="#workflow" class="hover:text-[var(--color-primary)] transition-colors">Client Case Studies</a></li>
+          <li><a href="/contact" class="hover:text-[var(--color-primary)] transition-colors">Contact Sales</a></li>
+          <li><a href="/#workflow" class="hover:text-[var(--color-primary)] transition-colors">Case Studies</a></li>
           <li><a href="/contact" class="hover:text-[var(--color-primary)] transition-colors">Schedule Free Audit</a></li>
         </ul>
       </div>
@@ -73,14 +71,14 @@
     </div>
 
     <!-- Bottom Copyright Row -->
-    <div class="pt-8 border-t border-[var(--color-hairline)] flex flex-col sm:flex-row items-center justify-between gap-4 font-tabular text-[11px]">
+    <div class="pt-6 sm:pt-8 border-t border-[var(--color-hairline)] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 font-tabular text-[11px] text-center sm:text-left">
       <div>
-        © {new Date().getFullYear()} We Destine Inc. All rights reserved. Transforming Healthcare Operations.
+        © {new Date().getFullYear()} We Destine Inc. All rights reserved.
       </div>
-      <div class="flex items-center gap-6">
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
         <a href="/contact" class="hover:text-[var(--color-primary)] transition-colors">Privacy Policy</a>
         <a href="/contact" class="hover:text-[var(--color-primary)] transition-colors">Terms of Service</a>
-        <a href="/contact" class="hover:text-[var(--color-primary)] transition-colors">HIPAA Compliance Statement</a>
+        <a href="/contact" class="hover:text-[var(--color-primary)] transition-colors">HIPAA Statement</a>
       </div>
     </div>
 

@@ -97,44 +97,44 @@ const steps = [
     </div>
 
     <!-- Stepper Navigation Header -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 mb-8 sm:mb-10">
       {steps.map((step, index) => (
         <button 
           type="button"
           data-step={index}
-          class={`workflow-step-tab p-3.5 rounded-xl border text-left transition-all cursor-pointer ${
+          class={`workflow-step-tab p-2.5 sm:p-3.5 rounded-xl border text-left transition-all cursor-pointer ${
             index === 0 
               ? 'border-[var(--color-primary)] bg-[var(--color-primary-bg-subdued-hover)]/20 shadow-xs' 
               : 'border-[var(--color-hairline)] hover:border-gray-400 bg-[var(--color-card-bg)]'
           }`}
         >
           <div class="flex items-center justify-between mb-1">
-            <span class="font-tabular font-light text-xs text-[var(--color-primary-deep)]">{step.number}</span>
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span class="font-tabular font-light text-[11px] sm:text-xs text-[var(--color-primary-deep)]">{step.number}</span>
+            <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400"></span>
           </div>
-          <div class="font-medium text-xs text-[var(--color-ink)] line-clamp-1">{step.title}</div>
+          <div class="font-medium text-[11px] sm:text-xs text-[var(--color-ink)] line-clamp-1">{step.title}</div>
         </button>
       ))}
     </div>
 
     <!-- Step Active Content Panel -->
-    <div class="bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] rounded-2xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
+    <div class="bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] rounded-2xl p-4 sm:p-10 shadow-sm relative overflow-hidden">
       
       {steps.map((step, index) => (
         <div 
           id={`step-panel-${index}`}
-          class={`workflow-step-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${index === 0 ? 'block' : 'hidden'}`}
+          class={`workflow-step-panel grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center ${index === 0 ? 'block' : 'hidden'}`}
         >
           <!-- Left Specs (7 cols) -->
           <div class="lg:col-span-7">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="font-tabular text-3xl font-light text-[var(--color-primary-deep)]">{step.number}</span>
-              <span class="px-3 py-1 rounded-full bg-[var(--color-primary)] text-white text-xs font-medium font-tabular">
+            <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
+              <span class="font-tabular text-2xl sm:text-3xl font-light text-[var(--color-primary-deep)]">{step.number}</span>
+              <span class="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-[var(--color-primary)] text-white text-[11px] sm:text-xs font-medium font-tabular">
                 {step.badge}
               </span>
             </div>
 
-            <h3 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] mb-2">
+            <h3 class="font-display-lg text-xl sm:text-3xl text-[var(--color-ink)] mb-2">
               {step.title}
             </h3>
             
