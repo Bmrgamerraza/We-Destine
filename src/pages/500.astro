@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ComplianceTrust from '../components/ComplianceTrust.astro';
+---
+
+<Layout 
+  title="Internal System Error (500) | We Destine RCM"
+  description="An unexpected server exception occurred. We Destine site reliability engineers have been notified and are actively monitoring."
+  canonical="https://wedestine.com/500"
+>
+  <section class="relative pt-20 pb-24 overflow-hidden bg-[var(--color-canvas-soft)] min-h-[70vh] flex items-center justify-center">
+    <div class="gradient-mesh-hero"></div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      
+      <!-- Error Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 text-rose-600 dark:text-rose-400 text-xs font-semibold uppercase tracking-wider border border-rose-500/20">
+        <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+        HTTP Status 500 • Internal System Exception
+      </div>
+
+      <!-- Large 500 Graphic Heading -->
+      <div class="space-y-4">
+        <h1 class="font-display-xxl text-6xl sm:text-8xl font-light tracking-tight text-[var(--color-ink)]">
+          5<span class="text-rose-500">0</span>0
+        </h1>
+        <h2 class="font-display-lg text-2xl sm:text-4xl text-[var(--color-ink)] font-normal">
+          Server Encountered an Error
+        </h2>
+        <p class="text-base sm:text-lg font-light text-[var(--color-ink-secondary)] max-w-xl mx-auto leading-relaxed">
+          An unexpected server error occurred while executing this request. Our engineering operations team has received an automated incident report.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <button onclick="window.location.reload()" class="btn-primary-pill text-sm py-3 px-8 shadow-sm cursor-pointer">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M2.5 22v-6h6"/><path d="M2 11.5a10 10 0 0 1 18.8-4.3L21.5 8M22 12.5a10 10 0 0 1-18.8 4.2L2.5 16"/></svg>
+          Reload Page
+        </button>
+        <a href="/" class="btn-secondary-pill text-sm py-3 px-8">
+          Return to Home
+        </a>
+      </div>
+
+      <!-- System Health Card -->
+      <div class="pt-8 max-w-md mx-auto">
+        <div class="p-6 rounded-2xl bg-[var(--color-card-bg)] border border-[var(--color-hairline)] space-y-3 text-left">
+          <div class="flex items-center justify-between">
+            <div class="font-medium text-sm text-[var(--color-ink)] flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              Network Systems Status
+            </div>
+            <span class="text-[11px] font-mono font-medium text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Operational</span>
+          </div>
+          <p class="text-xs text-[var(--color-ink-mute)] font-light leading-relaxed">
+            If you require immediate clinical billing or ERA processing assistance, reach out directly to our Client Support Desk:
+          </p>
+          <div class="text-xs font-tabular space-y-1 pt-1 border-t border-[var(--color-hairline)] text-[var(--color-ink-secondary)]">
+            <div>Support Line: <strong>1-800-DESTINE (337-8463)</strong></div>
+            <div>Email: <a href="mailto:solutions@wedestine.com" class="text-[var(--color-primary)] hover:underline">solutions@wedestine.com</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <ComplianceTrust />
+</Layout>

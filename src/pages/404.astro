@@ -1,0 +1,79 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ComplianceTrust from '../components/ComplianceTrust.astro';
+
+const quickLinks = [
+  { href: '/', title: 'Homepage', description: 'Return to We Destine main platform overview.' },
+  { href: '/medical-rcm', title: 'Medical RCM Solutions', description: 'Explore physician & hospital billing services.' },
+  { href: '/dental-rcm', title: 'Dental & DSO RCM', description: 'Specialized CDT coding and dental claim workflows.' },
+  { href: '/about', title: 'About We Destine', description: 'Learn about our certified coders & technology.' },
+  { href: '/contact', title: 'Contact RCM Support', description: 'Reach out to our 24/7 client desk or schedule an audit.' }
+];
+---
+
+<Layout 
+  title="Page Not Found (404) | We Destine Healthcare RCM"
+  description="The page you are looking for does not exist or may have been moved. Navigate back to We Destine homepage or explore our revenue cycle solutions."
+  canonical="https://wedestine.com/404"
+>
+  <section class="relative pt-20 pb-24 overflow-hidden bg-[var(--color-canvas-soft)] min-h-[70vh] flex items-center justify-center">
+    <div class="gradient-mesh-hero"></div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      
+      <!-- Error Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] text-xs font-semibold uppercase tracking-wider">
+        <span class="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse"></span>
+        HTTP Status 404 • Resource Missing
+      </div>
+
+      <!-- Large 404 Graphic Heading -->
+      <div class="space-y-4">
+        <h1 class="font-display-xxl text-6xl sm:text-8xl font-light tracking-tight text-[var(--color-ink)]">
+          4<span class="text-[var(--color-primary)]">0</span>4
+        </h1>
+        <h2 class="font-display-lg text-2xl sm:text-4xl text-[var(--color-ink)] font-normal">
+          Page or Route Not Found
+        </h2>
+        <p class="text-base sm:text-lg font-light text-[var(--color-ink-secondary)] max-w-xl mx-auto leading-relaxed">
+          The requested URL was not located on the We Destine network. It may have been moved, renamed, or is temporarily unavailable.
+        </p>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <a href="/" class="btn-primary-pill text-sm py-3 px-8 shadow-sm">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Back to Main Platform
+        </a>
+        <a href="/contact" class="btn-secondary-pill text-sm py-3 px-8">
+          Contact Client Desk
+        </a>
+      </div>
+
+      <!-- Recommended Quick Links Grid -->
+      <div class="pt-12 border-t border-[var(--color-hairline)] max-w-3xl mx-auto text-left space-y-4">
+        <h3 class="font-medium text-xs uppercase tracking-wider text-[var(--color-ink-mute)] text-center mb-6">
+          Popular Destinations
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {quickLinks.slice(0, 3).map(link => (
+            <a href={link.href} class="p-5 rounded-2xl bg-[var(--color-card-bg)] border border-[var(--color-hairline)] hover:border-[var(--color-primary)] transition-all group space-y-1 block">
+              <div class="font-medium text-sm text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors flex items-center justify-between">
+                <span>{link.title}</span>
+                <svg class="w-4 h-4 text-[var(--color-ink-mute)] group-hover:text-[var(--color-primary)] group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+              <p class="text-xs text-[var(--color-ink-mute)] font-light leading-relaxed">
+                {link.description}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <ComplianceTrust />
+</Layout>
