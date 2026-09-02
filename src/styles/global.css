@@ -6,11 +6,11 @@
   --breakpoint-xxs: 20rem; /* 320px */
   --breakpoint-xs: 24rem;  /* 384px */
   
-  --color-primary: #0284c7;
-  --color-primary-deep: #0369a1;
-  --color-primary-press: #075985;
-  --color-primary-soft: #0ea5e9;
-  --color-primary-bg-subdued-hover: #e0f2fe;
+  --color-primary: #0369a1;
+  --color-primary-deep: #075985;
+  --color-primary-press: #0c4a6e;
+  --color-primary-soft: #0284c7;
+  --color-primary-bg-subdued-hover: rgba(3, 105, 161, 0.12);
   
   --color-brand-dark-900: #0f172a;
   
@@ -29,8 +29,8 @@
   --color-card-bg: #ffffff;
   
   --color-ruby: #e11d48;
-  --color-magenta: #0284c7;
-  --color-lemon: #0369a1;
+  --color-magenta: #0369a1;
+  --color-lemon: #075985;
   
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
@@ -39,19 +39,20 @@ html.dark, .dark {
   --color-ink: #f8fafc;
   --color-ink-secondary: #cbd5e1;
   --color-ink-mute: #94a3b8;
-  --color-ink-mute-2: #94a3b8;
+  --color-ink-mute-2: #64748b;
   
-  --color-canvas: #0b0f19;
-  --color-canvas-soft: #111827;
-  --color-canvas-cream: #0f172a;
+  --color-canvas: #030712;
+  --color-canvas-soft: #090d16;
+  --color-canvas-cream: #0c1220;
   
   --color-hairline: #1e293b;
   --color-hairline-input: #334155;
-  --color-header-bg: rgba(11, 15, 25, 0.88);
-  --color-card-bg: #1e293b;
+  --color-header-bg: rgba(3, 7, 18, 0.88);
+  --color-card-bg: #0f172a;
   
-  --color-primary-bg-subdued-hover: rgba(2, 132, 199, 0.25);
+  --color-primary: #0284c7;
   --color-primary-deep: #38bdf8;
+  --color-primary-bg-subdued-hover: rgba(3, 105, 161, 0.25);
 }
 
 @layer base {
@@ -226,9 +227,9 @@ html.dark, .dark {
 
 .dark .gradient-mesh-hero {
   background: 
-    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(2, 132, 199, 0.3) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(15, 118, 110, 0.2) 0%, transparent 65%),
-    radial-gradient(ellipse 90% 70% at 85% -15%, rgba(30, 58, 138, 0.35) 0%, transparent 70%);
+    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(2, 132, 199, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(14, 165, 233, 0.15) 0%, transparent 65%),
+    radial-gradient(ellipse 90% 70% at 85% -15%, rgba(15, 23, 42, 0.5) 0%, transparent 70%);
 }
 
 .gradient-mesh-subtle {
@@ -240,6 +241,12 @@ html.dark, .dark {
     radial-gradient(circle at 90% 80%, rgba(240, 249, 255, 0.4) 0%, transparent 50%);
 }
 
+.dark .gradient-mesh-subtle {
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(15, 23, 42, 0.6) 0%, transparent 50%);
+}
+
 /* Glassmorphism & Surface Depth */
 .glass-card {
   background: rgba(255, 255, 255, 0.9);
@@ -249,15 +256,15 @@ html.dark, .dark {
 }
 
 .dark .glass-card {
-  background: rgba(30, 41, 59, 0.75);
+  background: rgba(15, 23, 42, 0.75);
   border-color: var(--color-hairline);
-  box-shadow: rgba(0, 0, 0, 0.4) 0 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 8px 32px;
 }
 
 .dark-dashboard-shell {
-  background-color: var(--color-brand-dark-900);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: rgba(2, 132, 199, 0.15) 0 16px 48px, rgba(0, 0, 0, 0.3) 0 4px 12px;
+  background-color: #030712;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: rgba(2, 132, 199, 0.2) 0 16px 48px, rgba(0, 0, 0, 0.6) 0 4px 16px;
 }
 
 
