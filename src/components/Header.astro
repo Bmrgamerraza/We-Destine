@@ -1,0 +1,98 @@
+---
+---
+
+<header class="sticky top-0 z-50 w-full transition-all duration-200 backdrop-blur-md bg-white/80 border-b border-[var(--color-hairline)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center gap-2 group text-decoration-none">
+        <div class="w-9 h-9 rounded-full bg-[var(--color-brand-dark-900)] flex items-center justify-center text-white font-semibold text-lg shadow-md group-hover:scale-105 transition-transform">
+          W<span class="text-[var(--color-primary)] font-bold">.</span>
+        </div>
+        <span class="text-2xl font-light tracking-tight text-[var(--color-ink)] group-hover:text-[var(--color-primary)] transition-colors">
+          We <span class="font-normal text-[var(--color-brand-dark-900)]">Destine</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-[15px] font-light">
+        <a href="/medical-rcm" class="text-[var(--color-ink-secondary)] hover:text-[var(--color-primary)] transition-colors py-1">
+          Medical RCM
+        </a>
+        <a href="/dental-rcm" class="text-[var(--color-ink-secondary)] hover:text-[var(--color-primary)] transition-colors py-1">
+          Dental RCM
+        </a>
+        <a href="#workflow" class="text-[var(--color-ink-secondary)] hover:text-[var(--color-primary)] transition-colors py-1">
+          Workflow
+        </a>
+        <a href="#integrations" class="text-[var(--color-ink-secondary)] hover:text-[var(--color-primary)] transition-colors py-1">
+          EHR Integrations
+        </a>
+        <a href="#calculator" class="text-[var(--color-ink-secondary)] hover:text-[var(--color-primary)] transition-colors py-1 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-[var(--color-primary)] inline-block"></span>
+          ROI Calculator
+        </a>
+        <a href="/about" class="text-[var(--color-ink-secondary)] hover:text-[var(--color-primary)] transition-colors py-1">
+          About
+        </a>
+      </nav>
+
+      <!-- Right CTAs -->
+      <div class="flex items-center gap-4">
+        <a href="/contact" class="hidden sm:inline-flex text-[14px] font-medium text-[var(--color-ink-secondary)] hover:text-[var(--color-primary)]">
+          Contact Us
+        </a>
+        <button id="open-audit-btn" class="btn-primary-pill shadow-sm text-sm cursor-pointer">
+          <span>Get Free RCM Audit</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <!-- Mobile menu toggle -->
+        <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-md text-[var(--color-ink)] hover:bg-gray-100" aria-label="Toggle Navigation Menu">
+          <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Dropdown -->
+  <div id="mobile-menu" class="hidden md:hidden border-b border-[var(--color-hairline)] bg-white px-4 pt-2 pb-6 space-y-3">
+    <a href="/medical-rcm" class="block py-2 text-base font-light text-[var(--color-ink)] hover:text-[var(--color-primary)]">Medical RCM</a>
+    <a href="/dental-rcm" class="block py-2 text-base font-light text-[var(--color-ink)] hover:text-[var(--color-primary)]">Dental RCM</a>
+    <a href="#workflow" class="block py-2 text-base font-light text-[var(--color-ink)] hover:text-[var(--color-primary)]">Workflow & Technology</a>
+    <a href="#integrations" class="block py-2 text-base font-light text-[var(--color-ink)] hover:text-[var(--color-primary)]">EHR Integrations</a>
+    <a href="#calculator" class="block py-2 text-base font-light text-[var(--color-primary)] font-medium">ROI Calculator</a>
+    <a href="/about" class="block py-2 text-base font-light text-[var(--color-ink)] hover:text-[var(--color-primary)]">About We Destine</a>
+    <a href="/contact" class="block py-2 text-base font-light text-[var(--color-ink)] hover:text-[var(--color-primary)]">Contact Us</a>
+  </div>
+</header>
+
+<script>
+  // Mobile Menu Toggle
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+
+  // Audit Modal Trigger
+  const auditBtn = document.getElementById('open-audit-btn');
+  if (auditBtn) {
+    auditBtn.addEventListener('click', () => {
+      const modal = document.getElementById('audit-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    });
+  }
+</script>

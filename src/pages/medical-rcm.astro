@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RoiCalculator from '../components/RoiCalculator.astro';
+import ComplianceTrust from '../components/ComplianceTrust.astro';
+---
+
+<Layout 
+  title="Medical RCM Solutions | We Destine"
+  description="End-to-end medical revenue cycle management, AI coding, clean claim scrubbing, and denial resolution for physician practices and hospitals."
+>
+  <section class="relative pt-16 pb-20 overflow-hidden bg-[var(--color-canvas-soft)] border-b border-[var(--color-hairline)]">
+    <div class="gradient-mesh-hero"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] text-xs font-semibold uppercase tracking-wider mb-4">
+        Specialist Medical Revenue Management
+      </div>
+
+      <h1 class="font-display-xxl text-4xl sm:text-5xl text-[var(--color-ink)] mb-6">
+        Intelligent Medical RCM Built for Physician Growth
+      </h1>
+
+      <p class="text-lg font-light text-[var(--color-ink-secondary)] leading-relaxed mb-8">
+        From outpatient specialty clinics to regional health networks, We Destine eliminates medical billing bottlenecks, slashes claims denials below 1.8%, and speeds up A/R collections.
+      </p>
+
+      <button onclick="document.getElementById('audit-modal')?.classList.remove('hidden'); document.getElementById('audit-modal')?.classList.add('flex')" class="btn-primary-pill text-base py-3 px-8 cursor-pointer">
+        Get Medical Practice Audit
+      </button>
+    </div>
+  </section>
+
+  <!-- Medical Point Solutions Grid -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display-xl text-3xl sm:text-4xl text-[var(--color-ink)] mb-4">
+          Complete Medical Revenue Cycle Capabilities
+        </h2>
+        <p class="text-base font-light text-[var(--color-ink-secondary)]">
+          Deploy our full end-to-end service or select individual point solutions to fix specific operational vulnerabilities.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-8 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
+          <div class="text-3xl mb-4">📋</div>
+          <h3 class="font-medium text-xl text-[var(--color-ink)] mb-2">Medical Billing & Clearinghouse</h3>
+          <p class="text-sm font-light text-[var(--color-ink-secondary)] leading-relaxed mb-4">
+            Sub-second electronic claim scrubbing against 40,000+ commercial and government payer rules prior to clearinghouse transmission.
+          </p>
+          <ul class="text-xs space-y-2 text-[var(--color-ink-mute)] font-light font-tabular">
+            <li>✓ 98.6% first-pass clean claim rate</li>
+            <li>✓ Secondary & tertiary payer coordination</li>
+            <li>✓ Daily ERA payment posting</li>
+          </ul>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
+          <div class="text-3xl mb-4">🩺</div>
+          <h3 class="font-medium text-xl text-[var(--color-ink)] mb-2">ICD-10 & CPT Medical Coding</h3>
+          <p class="text-sm font-light text-[var(--color-ink-secondary)] leading-relaxed mb-4">
+            Certified AAPC & AHIMA coders ensure complete clinical documentation compliance, eliminating under-coding and audit exposure.
+          </p>
+          <ul class="text-xs space-y-2 text-[var(--color-ink-mute)] font-light font-tabular">
+            <li>✓ 100% certified specialty coders</li>
+            <li>✓ CCI edit validation</li>
+            <li>✓ Operative report parsing</li>
+          </ul>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
+          <div class="text-3xl mb-4">🛡️</div>
+          <h3 class="font-medium text-xl text-[var(--color-ink)] mb-2">Denial Appeals Engine</h3>
+          <p class="text-sm font-light text-[var(--color-ink-secondary)] leading-relaxed mb-4">
+            Aggressive denial management protocols that overturn wrongfully denied medical claims within 48 hours of ERA receipt.
+          </p>
+          <ul class="text-xs space-y-2 text-[var(--color-ink-mute)] font-light font-tabular">
+            <li>✓ 94% overturn success rate</li>
+            <li>✓ Payer-specific appeal templates</li>
+            <li>✓ Timely filing deadline alerts</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <RoiCalculator />
+  <ComplianceTrust />
+</Layout>

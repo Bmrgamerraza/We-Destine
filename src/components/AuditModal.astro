@@ -1,0 +1,169 @@
+---
+---
+
+<div id="audit-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-xs p-4 overflow-y-auto">
+  <div class="relative w-full max-w-xl bg-white rounded-2xl border border-[var(--color-hairline)] shadow-2xl overflow-hidden p-6 sm:p-8 animate-in fade-in zoom-in duration-200">
+    
+    <!-- Close Button -->
+    <button id="close-audit-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 p-2 rounded-full hover:bg-gray-100 transition-colors">
+      ✕
+    </button>
+
+    <div id="modal-form-step-1">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] text-xs font-semibold uppercase tracking-wider mb-3">
+        Free Practice Analysis
+      </div>
+
+      <h3 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] mb-2">
+        Request Your Comprehensive RCM Audit
+      </h3>
+      
+      <p class="text-xs sm:text-sm font-light text-[var(--color-ink-secondary)] mb-6">
+        Our healthcare financial analysts will review your current claim denial rates, code accuracy, and A/R speed—identifying uncollected revenue at zero cost or obligation.
+      </p>
+
+      <form id="audit-form" class="space-y-4">
+        
+        <div>
+          <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">
+            Full Name *
+          </label>
+          <input 
+            type="text" 
+            required 
+            placeholder="Dr. Sarah Jenkins"
+            class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] transition-colors"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">
+              Work Email *
+            </label>
+            <input 
+              type="email" 
+              required 
+              placeholder="s.jenkins@practice.com"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">
+              Phone Number *
+            </label>
+            <input 
+              type="tel" 
+              required 
+              placeholder="(555) 234-5678"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] transition-colors"
+            />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">
+              Practice Name / Health Group *
+            </label>
+            <input 
+              type="text" 
+              required 
+              placeholder="Apex Medical Group"
+              class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] transition-colors"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">
+              Organization Type
+            </label>
+            <select class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white transition-colors">
+              <option value="medical">Medical Practice / Clinic</option>
+              <option value="dental">Dental Practice / DSO</option>
+              <option value="hospital">Hospital / Health System</option>
+              <option value="asc">Ambulatory Surgery Center (ASC)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">
+            Estimated Monthly Billing Collections
+          </label>
+          <select class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white transition-colors">
+            <option value="under100k">Under $100,000 / mo</option>
+            <option value="100k-250k">$100,000 – $250,000 / mo</option>
+            <option value="250k-500k" selected>$250,000 – $500,000 / mo</option>
+            <option value="500k-1m">$500,000 – $1,000,000 / mo</option>
+            <option value="over1m">$1,000,000+ / mo</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full btn-primary-pill text-sm py-3 cursor-pointer justify-center mt-2">
+          <span>Submit Audit Request</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <div class="text-[11px] text-center text-[var(--color-ink-mute)] font-light mt-3">
+          🔒 100% Confidential & HIPAA Compliant. We never share your data.
+        </div>
+      </form>
+    </div>
+
+    <!-- Success State -->
+    <div id="modal-success-state" class="hidden text-center py-8">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 text-2xl">
+        ✓
+      </div>
+      <h3 class="font-display-md text-2xl text-[var(--color-ink)] mb-2">
+        Audit Request Received!
+      </h3>
+      <p class="text-sm text-[var(--color-ink-secondary)] font-light mb-6">
+        Thank you. A senior We Destine RCM strategist has been assigned to your analysis and will contact you within 24 hours.
+      </p>
+      <button id="close-success-btn" class="btn-dark-pill text-xs py-2.5 px-6 cursor-pointer">
+        Close Window
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('audit-modal');
+  const closeBtn = document.getElementById('close-audit-modal');
+  const closeSuccessBtn = document.getElementById('close-success-btn');
+  const form = document.getElementById('audit-form');
+  const step1 = document.getElementById('modal-form-step-1');
+  const successState = document.getElementById('modal-success-state');
+
+  function closeModal() {
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', closeModal);
+
+  if (form && step1 && successState) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      step1.classList.add('hidden');
+      successState.classList.remove('hidden');
+    });
+  }
+
+  // Click outside to close
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
+</script>

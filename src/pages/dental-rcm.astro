@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ComplianceTrust from '../components/ComplianceTrust.astro';
+---
+
+<Layout 
+  title="Dental RCM & DSO Solutions | We Destine"
+  description="Specialized dental revenue cycle management, CDT coding, radiography proof attachments, and multi-location DSO billing solutions."
+>
+  <section class="relative pt-16 pb-20 overflow-hidden bg-[var(--color-canvas-soft)] border-b border-[var(--color-hairline)]">
+    <div class="gradient-mesh-hero"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] text-xs font-semibold uppercase tracking-wider mb-4">
+        Dental & DSO Revenue Optimization
+      </div>
+
+      <h1 class="font-display-xxl text-4xl sm:text-5xl text-[var(--color-ink)] mb-6">
+        Precision Dental RCM for Single Practices & DSOs
+      </h1>
+
+      <p class="text-lg font-light text-[var(--color-ink-secondary)] leading-relaxed mb-8">
+        Eliminate dental claim rejections caused by missing x-rays, narrative errors, or CDT code mismatches. Scalable solutions tailored for general dentistry, oral surgery, and multi-location DSOs.
+      </p>
+
+      <button onclick="document.getElementById('audit-modal')?.classList.remove('hidden'); document.getElementById('audit-modal')?.classList.add('flex')" class="btn-primary-pill text-base py-3 px-8 cursor-pointer">
+        Get Dental RCM Audit
+      </button>
+    </div>
+  </section>
+
+  <!-- Dental Features -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-8 rounded-2xl bg-[var(--color-canvas-cream)]/50 border border-[var(--color-hairline)]">
+          <div class="text-3xl mb-4">🦷</div>
+          <h3 class="font-medium text-xl text-[var(--color-ink)] mb-2">CDT Coding & Narratives</h3>
+          <p class="text-sm font-light text-[var(--color-ink-secondary)] leading-relaxed mb-4">
+            Expert CDT procedure coding backed by required clinical narratives, periodontal charting, and digital radiograph attachments.
+          </p>
+          <div class="text-xs font-tabular text-[var(--color-primary-deep)]">✓ Zero attachment rejection rate</div>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-[var(--color-canvas-cream)]/50 border border-[var(--color-hairline)]">
+          <div class="text-3xl mb-4">🏬</div>
+          <h3 class="font-medium text-xl text-[var(--color-ink)] mb-2">Multi-Location DSO Centralization</h3>
+          <p class="text-sm font-light text-[var(--color-ink-secondary)] leading-relaxed mb-4">
+            Unified billing architecture for Dental Support Organizations (DSOs), consolidating posting, insurance verification, and A/R across dozens of practice locations.
+          </p>
+          <div class="text-xs font-tabular text-[var(--color-primary-deep)]">✓ Centralized DSO executive reporting</div>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-[var(--color-canvas-cream)]/50 border border-[var(--color-hairline)]">
+          <div class="text-3xl mb-4">💳</div>
+          <h3 class="font-medium text-xl text-[var(--color-ink)] mb-2">Patient Financing & Self-Pay</h3>
+          <p class="text-sm font-light text-[var(--color-ink-secondary)] leading-relaxed mb-4">
+            Automated SMS e-statements and integrated dental payment plan administration to minimize patient write-offs.
+          </p>
+          <div class="text-xs font-tabular text-[var(--color-primary-deep)]">✓ 35% faster patient collections</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <ComplianceTrust />
+</Layout>

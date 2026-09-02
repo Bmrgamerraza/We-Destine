@@ -1,11 +1,25 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import HeroGradientMesh from '../components/HeroGradientMesh.astro';
+import RoiCalculator from '../components/RoiCalculator.astro';
+import WorkflowStepper from '../components/WorkflowStepper.astro';
+import CompositedDashboard from '../components/CompositedDashboard.astro';
+import SpecialtySolutions from '../components/SpecialtySolutions.astro';
+import EhrIntegrationGrid from '../components/EhrIntegrationGrid.astro';
+import CreamTestimonialBand from '../components/CreamTestimonialBand.astro';
+import ComplianceTrust from '../components/ComplianceTrust.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+  title="We Destine | Intelligent Healthcare Revenue Cycle Management"
+  description="Accelerate medical & dental collections, eliminate claim denials, and optimize practice financial performance with technology-driven RCM solutions."
+>
+  <HeroGradientMesh />
+  <SpecialtySolutions />
+  <WorkflowStepper />
+  <CompositedDashboard />
+  <RoiCalculator />
+  <EhrIntegrationGrid />
+  <CreamTestimonialBand />
+  <ComplianceTrust />
 </Layout>

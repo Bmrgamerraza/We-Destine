@@ -1,0 +1,178 @@
+---
+---
+
+<section class="py-20 bg-white relative border-t border-[var(--color-hairline)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] text-xs font-medium uppercase tracking-wider mb-4">
+        Interactive Command Center
+      </div>
+      <h2 class="font-display-xl text-3xl sm:text-4xl text-[var(--color-ink)] mb-4">
+        Total Financial Visibility Across Your Practice
+      </h2>
+      <p class="text-base sm:text-lg font-light text-[var(--color-ink-secondary)]">
+        Experience real-time revenue analytics, automated denial tracking, and payment velocity metrics through our proprietary dark app-shell dashboard.
+      </p>
+    </div>
+
+    <!-- Composited Dark Dashboard Container (DESIGN.md specification) -->
+    <div class="dark-dashboard-shell rounded-2xl overflow-hidden p-6 sm:p-10 text-white shadow-2xl">
+      
+      <!-- Top Nav Bar in Dashboard Shell -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-white/10 pb-6 mb-8 gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-[var(--color-primary)] flex items-center justify-center font-bold text-white shadow-md">
+            WD
+          </div>
+          <div>
+            <div class="font-medium text-base text-white">We Destine Financial Intelligence</div>
+            <div class="text-xs text-slate-400 font-mono">Live EHR Bridge: Epic & athenahealth connected</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button class="dash-tab active px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white/10 text-white border border-white/10 cursor-pointer">
+            Overview
+          </button>
+          <button class="dash-tab px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition-colors cursor-pointer">
+            Denial Heatmap
+          </button>
+          <button class="dash-tab px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition-colors cursor-pointer">
+            A/R Bucket Velocity
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Visual Grid inside Dark Shell -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Left Stats & Charts (8 cols) -->
+        <div class="lg:col-span-8 space-y-6">
+          
+          <div class="grid grid-cols-3 gap-4 font-tabular">
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="text-xs text-slate-400 font-light mb-1">Total Collections MTD</div>
+              <div class="text-2xl sm:text-3xl font-light text-white">$1,248,930</div>
+              <div class="text-[11px] text-emerald-400 mt-1">↑ 14.8% vs last month</div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="text-xs text-slate-400 font-light mb-1">Clean Claims Submitted</div>
+              <div class="text-2xl sm:text-3xl font-light text-emerald-400">4,120 <span class="text-xs font-normal text-slate-400">claims</span></div>
+              <div class="text-[11px] text-emerald-400 mt-1">98.9% first-pass pass</div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+              <div class="text-xs text-slate-400 font-light mb-1">Current A/R &gt; 90 Days</div>
+              <div class="text-2xl sm:text-3xl font-light text-rose-400">&lt; 3.1%</div>
+              <div class="text-[11px] text-emerald-400 mt-1">Industry benchmark: 12%</div>
+            </div>
+          </div>
+
+          <!-- Simulated Performance Chart Bar -->
+          <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs font-medium uppercase tracking-wider text-slate-300">Monthly Payout Velocity ($)</span>
+              <span class="text-xs font-mono text-emerald-400">Target Reached: 104%</span>
+            </div>
+
+            <div class="grid grid-cols-6 gap-3 items-end h-40 pt-4 border-b border-white/10 font-tabular text-center">
+              
+              <div class="flex flex-col items-center gap-2 h-full justify-end">
+                <div class="w-full bg-[var(--color-primary)]/40 rounded-t-md h-[60%] relative group">
+                  <span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] bg-black text-white px-1.5 py-0.5 rounded font-mono">$890k</span>
+                </div>
+                <span class="text-[11px] text-slate-400 font-mono">Mar</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 h-full justify-end">
+                <div class="w-full bg-[var(--color-primary)]/50 rounded-t-md h-[68%] relative group">
+                  <span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] bg-black text-white px-1.5 py-0.5 rounded font-mono">$960k</span>
+                </div>
+                <span class="text-[11px] text-slate-400 font-mono">Apr</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 h-full justify-end">
+                <div class="w-full bg-[var(--color-primary)]/60 rounded-t-md h-[75%] relative group">
+                  <span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] bg-black text-white px-1.5 py-0.5 rounded font-mono">$1.05M</span>
+                </div>
+                <span class="text-[11px] text-slate-400 font-mono">May</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 h-full justify-end">
+                <div class="w-full bg-[var(--color-primary)]/70 rounded-t-md h-[82%] relative group">
+                  <span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] bg-black text-white px-1.5 py-0.5 rounded font-mono">$1.12M</span>
+                </div>
+                <span class="text-[11px] text-slate-400 font-mono">Jun</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 h-full justify-end">
+                <div class="w-full bg-[var(--color-primary)]/80 rounded-t-md h-[90%] relative group">
+                  <span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] bg-black text-white px-1.5 py-0.5 rounded font-mono">$1.18M</span>
+                </div>
+                <span class="text-[11px] text-slate-400 font-mono">Jul</span>
+              </div>
+
+              <div class="flex flex-col items-center gap-2 h-full justify-end">
+                <div class="w-full bg-gradient-to-t from-[var(--color-primary)] to-emerald-400 rounded-t-md h-[98%] relative group">
+                  <span class="opacity-0 group-hover:opacity-100 absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] bg-black text-white px-1.5 py-0.5 rounded font-mono">$1.25M</span>
+                </div>
+                <span class="text-[11px] text-emerald-400 font-mono font-bold">Aug</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Denial Breakdown Feed (4 cols) -->
+        <div class="lg:col-span-4 bg-white/5 border border-white/10 rounded-xl p-5 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-300">Automated Denial Appeals</span>
+              <span class="text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">94% Overturned</span>
+            </div>
+
+            <div class="space-y-3 font-tabular text-xs">
+              
+              <div class="p-3 rounded bg-white/5 border border-white/5">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-rose-300 font-medium">CO-97: Bundling Denial</span>
+                  <span class="text-emerald-400 font-bold">+$3,420 Recovered</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-light">Appeal letter & clinical chart resubmitted to BlueCross</div>
+              </div>
+
+              <div class="p-3 rounded bg-white/5 border border-white/5">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-rose-300 font-medium">PR-27: Coverage Expired</span>
+                  <span class="text-emerald-400 font-bold">+$1,850 Recovered</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-light">Secondary payer auto-routed & refiled clean</div>
+              </div>
+
+              <div class="p-3 rounded bg-white/5 border border-white/5">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-indigo-300 font-medium">CO-16: Prior Auth Proof</span>
+                  <span class="text-slate-300">In Appeal Review</span>
+                </div>
+                <div class="text-[11px] text-slate-400 font-light">Prior auth code attach & resubmitted within 24h</div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/10">
+            <button onclick="document.getElementById('audit-modal')?.classList.remove('hidden'); document.getElementById('audit-modal')?.classList.add('flex')" class="w-full btn-primary-pill text-xs py-2.5 cursor-pointer justify-center">
+              Request Command Center Demo
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

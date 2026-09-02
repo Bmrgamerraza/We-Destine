@@ -1,0 +1,226 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Patient Eligibility & Auth",
+    subtitle: "Front-End Intake Integrity",
+    badge: "99.4% Auth Precision",
+    description: "Automated real-time verification of patient insurance benefits, copays, deductibles, and prior authorization requirements before clinical service delivery to eliminate front-end rejections.",
+    highlights: [
+      "Instant batch & real-time eligibility check",
+      "Prior auth tracking & payer rule engine",
+      "Demographic scrubbing & identity check",
+      "Copay & deductible estimation at check-in"
+    ]
+  },
+  {
+    number: "02",
+    title: "AI-Assisted Coding & Audit",
+    subtitle: "Medical & Dental Precision",
+    badge: "100% Certified Coders",
+    description: "Dual-layer clinical coding utilizing advanced NLP AI combined with AAPC and AHIMA certified human coders to ensure 100% compliant ICD-10, CPT, and CDT coding across all specialties.",
+    highlights: [
+      "Automatic EHR clinical documentation parsing",
+      "Specialty-specific CCI & NCCI edit validation",
+      "Medical necessity & modifier optimization",
+      "Zero under-coding or revenue leakage"
+    ]
+  },
+  {
+    number: "03",
+    title: "Clean Claim Submission",
+    subtitle: "Clearinghouse Direct Gateway",
+    badge: "98.6% First-Pass Clean Rate",
+    description: "Instantaneous scrubbing against 40,000+ payer-specific rules and direct clearinghouse transmission within 24 hours of clinical encounter documentation.",
+    highlights: [
+      "Sub-second claim scrubbing & validation",
+      "Direct EDI 837 connectivity to top payers",
+      "Automatic secondary claim generation",
+      "Real-time acknowledgement & error tracking"
+    ]
+  },
+  {
+    number: "04",
+    title: "Denial Resolution & Appeals",
+    subtitle: "Root-Cause Recovery Engine",
+    badge: "< 1.8% Denial Rate Target",
+    description: "AI-driven denial categorization paired with specialized appeal workflows to challenge, refile, and recover revenue from wrongfully denied claims within 48 hours.",
+    highlights: [
+      "Automated ERA/835 denial reason mapping",
+      "Specialty-tailored clinical appeal letter templates",
+      "Timely filing limit deadline tracker",
+      "Payer behavior pattern analytics"
+    ]
+  },
+  {
+    number: "05",
+    title: "Patient Billing & Collections",
+    subtitle: "Frictionless Payment Portals",
+    badge: "35% Faster Patient Payouts",
+    description: "Transparent, digital-first patient statements, SMS payment links, flexible payment plans, and compassionate patient support to accelerate self-pay collections.",
+    highlights: [
+      "Digital SMS & Email e-Statements",
+      "One-click mobile payment portal",
+      "Automated payment plan administration",
+      "Dedicated HIPAA-trained patient support specialists"
+    ]
+  },
+  {
+    number: "06",
+    title: "Command Center Analytics",
+    subtitle: "Executive Financial Intelligence",
+    badge: "Real-Time BI Dashboard",
+    description: "360-degree financial visibility with dynamic reporting on net collection ratios, A/R aging buckets, provider productivity, and payer reimbursement velocity.",
+    highlights: [
+      "Customizable executive KPI dashboard",
+      "A/R aging bucket breakdown (0-30, 31-60, 61-90, 90+)",
+      "Provider RVU & specialty performance tracking",
+      "Automated monthly executive strategy reviews"
+    ]
+  }
+];
+---
+
+<section id="workflow" class="py-20 bg-white relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] text-xs font-medium uppercase tracking-wider mb-4">
+        End-to-End Excellence
+      </div>
+      <h2 class="font-display-xl text-3xl sm:text-4xl text-[var(--color-ink)] mb-4">
+        The We Destine Intelligent RCM Lifecycle
+      </h2>
+      <p class="text-base sm:text-lg font-light text-[var(--color-ink-secondary)]">
+        From patient check-in to final bank deposit, our technology-driven workflow ensures max collection speed and zero revenue leakage.
+      </p>
+    </div>
+
+    <!-- Stepper Navigation Header -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
+      {steps.map((step, index) => (
+        <button 
+          type="button"
+          data-step={index}
+          class={`workflow-step-tab p-3.5 rounded-xl border text-left transition-all cursor-pointer ${
+            index === 0 
+              ? 'border-[var(--color-primary)] bg-[var(--color-primary-bg-subdued-hover)]/20 shadow-xs' 
+              : 'border-[var(--color-hairline)] hover:border-gray-300 bg-white'
+          }`}
+        >
+          <div class="flex items-center justify-between mb-1">
+            <span class="font-tabular font-light text-xs text-[var(--color-primary-deep)]">{step.number}</span>
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+          </div>
+          <div class="font-medium text-xs text-[var(--color-ink)] line-clamp-1">{step.title}</div>
+        </button>
+      ))}
+    </div>
+
+    <!-- Step Active Content Panel -->
+    <div class="bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] rounded-2xl p-6 sm:p-10 shadow-sm relative overflow-hidden">
+      
+      {steps.map((step, index) => (
+        <div 
+          id={`step-panel-${index}`}
+          class={`workflow-step-panel grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${index === 0 ? 'block' : 'hidden'}`}
+        >
+          <!-- Left Specs (7 cols) -->
+          <div class="lg:col-span-7">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-tabular text-3xl font-light text-[var(--color-primary-deep)]">{step.number}</span>
+              <span class="px-3 py-1 rounded-full bg-[var(--color-primary)] text-white text-xs font-medium font-tabular">
+                {step.badge}
+              </span>
+            </div>
+
+            <h3 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] mb-2">
+              {step.title}
+            </h3>
+            
+            <div class="text-sm font-medium text-[var(--color-primary-soft)] mb-4">
+              {step.subtitle}
+            </div>
+
+            <p class="text-base font-light text-[var(--color-ink-secondary)] leading-relaxed mb-6">
+              {step.description}
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {step.highlights.map(item => (
+                <div class="flex items-start gap-2.5 text-sm text-[var(--color-ink)] font-light">
+                  <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                    ✓
+                  </div>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Right Visual Panel (5 cols) -->
+          <div class="lg:col-span-5 bg-white border border-[var(--color-hairline)] rounded-xl p-6 shadow-md">
+            <div class="text-xs font-semibold uppercase tracking-wider text-[var(--color-ink-mute)] mb-4 flex items-center justify-between">
+              <span>Operational Metric</span>
+              <span class="font-mono text-emerald-500">Live SLA</span>
+            </div>
+
+            <div class="p-4 rounded-lg bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] mb-4 font-tabular">
+              <div class="text-xs text-[var(--color-ink-mute)] mb-1">Target Speed SLA</div>
+              <div class="text-2xl font-light text-[var(--color-ink)]">Under 24 Hours</div>
+              <div class="text-xs text-emerald-600 mt-1">✓ Automated 99.8% of encounters</div>
+            </div>
+
+            <div class="space-y-3 font-tabular text-xs">
+              <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                <span class="text-gray-500">Payer API Direct Sync</span>
+                <span class="font-medium text-emerald-600">Active</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                <span class="text-gray-500">Coder Certification</span>
+                <span class="font-medium text-gray-800">AAPC / AHIMA</span>
+              </div>
+              <div class="flex justify-between items-center py-2">
+                <span class="text-gray-500">HIPAA Data Security</span>
+                <span class="font-medium text-gray-800">256-Bit Encrypted</span>
+              </div>
+            </div>
+
+            <button onclick="document.getElementById('audit-modal')?.classList.remove('hidden'); document.getElementById('audit-modal')?.classList.add('flex')" class="mt-6 w-full btn-dark-pill text-xs py-2.5 cursor-pointer justify-center">
+              Request Step Audit for Your Practice
+            </button>
+          </div>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Workflow Tab Swapper
+  const tabs = document.querySelectorAll('.workflow-step-tab');
+  const panels = document.querySelectorAll('.workflow-step-panel');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('border-[var(--color-primary)]', 'bg-[var(--color-primary-bg-subdued-hover)]/20', 'shadow-xs');
+        t.classList.add('border-[var(--color-hairline)]', 'bg-white');
+      });
+      tab.classList.remove('border-[var(--color-hairline)]', 'bg-white');
+      tab.classList.add('border-[var(--color-primary)]', 'bg-[var(--color-primary-bg-subdued-hover)]/20', 'shadow-xs');
+
+      panels.forEach((panel, pIdx) => {
+        if (pIdx === index) {
+          panel.classList.remove('hidden');
+          panel.classList.add('block');
+        } else {
+          panel.classList.remove('block');
+          panel.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>

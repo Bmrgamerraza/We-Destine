@@ -1,0 +1,108 @@
+---
+const specialties = [
+  {
+    title: "Medical Practices & Clinics",
+    subtitle: "Solo, Group & Multi-Specialty Practices",
+    icon: "⚕️",
+    badge: "Medical RCM",
+    features: [
+      "CPT & ICD-10 specialty coding",
+      "Prior auth & eligibility verification",
+      "Patient statement & portal management",
+      "Secondary & tertiary claim recovery"
+    ]
+  },
+  {
+    title: "Dental Practices & DSOs",
+    subtitle: "General Dentistry, Ortho & Oral Surgery",
+    icon: "🦷",
+    badge: "Dental RCM",
+    features: [
+      "CDT procedure coding & attachments",
+      "Radiograph & periodontal charting proof",
+      "DSO multi-location central billing",
+      "Payer fee schedule negotiation"
+    ]
+  },
+  {
+    title: "Hospitals & Health Systems",
+    subtitle: "Inpatient & Outpatient Facilities",
+    icon: "🏥",
+    badge: "Enterprise RCM",
+    features: [
+      "Complex UB-04 & Institutional billing",
+      "High-value claim denial resolution",
+      "DRG & APC coding validation",
+      "A/R aging recovery (>90 days)"
+    ]
+  },
+  {
+    title: "ASCs & Specialty Centers",
+    subtitle: "Cardiology, Orthopedics, Radiology & More",
+    icon: "🩺",
+    badge: "Specialty Solutions",
+    features: [
+      "Implant & high-cost supply reimbursement",
+      "Facility vs Professional fee splits",
+      "Anesthesia time & unit coding",
+      "Specialty payer audit defense"
+    ]
+  }
+];
+---
+
+<section class="py-20 bg-white relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] text-xs font-medium uppercase tracking-wider mb-4">
+        Specialized Expertise
+      </div>
+      <h2 class="font-display-xl text-3xl sm:text-4xl text-[var(--color-ink)] mb-4">
+        Tailored Solutions for Every Healthcare Sector
+      </h2>
+      <p class="text-base sm:text-lg font-light text-[var(--color-ink-secondary)]">
+        Generic billing fails due to specialty coding nuances. We Destine provides dedicated teams trained specifically in your specialty's payer rules.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {specialties.map(spec => (
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-[var(--color-primary)] transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-3xl p-2.5 rounded-xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] group-hover:scale-110 transition-transform">
+                {spec.icon}
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] font-mono">
+                {spec.badge}
+              </span>
+            </div>
+
+            <h3 class="font-medium text-xl text-[var(--color-ink)] mb-1 group-hover:text-[var(--color-primary)] transition-colors">
+              {spec.title}
+            </h3>
+            
+            <p class="text-xs text-[var(--color-ink-mute)] mb-6">
+              {spec.subtitle}
+            </p>
+
+            <ul class="space-y-2.5 mb-6 text-xs text-[var(--color-ink-secondary)] font-light">
+              {spec.features.map(f => (
+                <li class="flex items-center gap-2">
+                  <span class="text-[var(--color-primary)] font-bold">✓</span>
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <button onclick="document.getElementById('audit-modal')?.classList.remove('hidden'); document.getElementById('audit-modal')?.classList.add('flex')" class="w-full btn-secondary-pill text-xs py-2 cursor-pointer justify-center">
+            Explore {spec.badge}
+          </button>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

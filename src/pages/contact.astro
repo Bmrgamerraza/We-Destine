@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ComplianceTrust from '../components/ComplianceTrust.astro';
+---
+
+<Layout 
+  title="Contact Sales & Support | We Destine"
+  description="Get in touch with We Destine healthcare RCM specialists to schedule your free practice audit or software demo."
+>
+  <section class="relative pt-16 pb-20 overflow-hidden bg-[var(--color-canvas-soft)] border-b border-[var(--color-hairline)]">
+    <div class="gradient-mesh-hero"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] text-xs font-semibold uppercase tracking-wider mb-4">
+        Get in Touch
+      </div>
+
+      <h1 class="font-display-xxl text-4xl sm:text-5xl text-[var(--color-ink)] mb-6">
+        Let's Accelerate Your Practice Revenue
+      </h1>
+
+      <p class="text-lg font-light text-[var(--color-ink-secondary)] leading-relaxed mb-4">
+        Have questions about our technology or pricing? Speak directly with an RCM strategist today.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left Contact Info (5 cols) -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <h3 class="font-display-lg text-2xl text-[var(--color-ink)] mb-2">
+              We Destine Corporate Office
+            </h3>
+            <p class="text-sm font-light text-[var(--color-ink-secondary)]">
+              Partnering with healthcare practices nationwide.
+            </p>
+          </div>
+
+          <div class="space-y-4 font-tabular text-sm text-[var(--color-ink-secondary)] font-light">
+            <div class="flex items-start gap-3">
+              <span class="text-[var(--color-primary)] font-bold text-lg">🌐</span>
+              <div>
+                <div class="font-medium text-[var(--color-ink)]">Official Domain</div>
+                <a href="https://wedestine.com" class="text-[var(--color-primary)]">wedestine.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-[var(--color-primary)] font-bold text-lg">✉️</span>
+              <div>
+                <div class="font-medium text-[var(--color-ink)]">Sales & Audits</div>
+                <a href="mailto:solutions@wedestine.com" class="text-[var(--color-primary)]">solutions@wedestine.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-[var(--color-primary)] font-bold text-lg">📞</span>
+              <div>
+                <div class="font-medium text-[var(--color-ink)]">Client Support Line</div>
+                <span>1-800-DESTINE (337-8463)</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <span class="text-[var(--color-primary)] font-bold text-lg">🛡️</span>
+              <div>
+                <div class="font-medium text-[var(--color-ink)]">HIPAA Compliance Desk</div>
+                <span>compliance@wedestine.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[var(--color-canvas-cream)] border border-amber-900/10">
+            <div class="font-medium text-sm text-[var(--color-ink)] mb-1">Looking for a Free RCM Audit?</div>
+            <p class="text-xs text-[var(--color-ink-mute)] mb-4">
+              Get an instant baseline of your practice's denial rate and uncollected revenue.
+            </p>
+            <button onclick="document.getElementById('audit-modal')?.classList.remove('hidden'); document.getElementById('audit-modal')?.classList.add('flex')" class="btn-primary-pill text-xs py-2 px-4 cursor-pointer">
+              Launch Audit Modal
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Form (7 cols) -->
+        <div class="lg:col-span-7 bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] rounded-2xl p-8 shadow-sm">
+          <h3 class="font-display-md text-2xl text-[var(--color-ink)] mb-6">
+            Send Us a Message
+          </h3>
+
+          <form id="contact-page-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">First Name *</label>
+                <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">Last Name *</label>
+                <input type="text" required class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">Work Email *</label>
+              <input type="email" required class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">Practice / Facility Name</label>
+              <input type="text" class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-[var(--color-ink)] mb-1">How can we help your practice? *</label>
+              <textarea rows="4" required class="w-full px-3.5 py-2.5 rounded-lg border border-[var(--color-hairline-input)] text-sm focus:outline-none focus:border-[var(--color-primary)] bg-white"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary-pill text-sm py-3 px-8 cursor-pointer w-full sm:w-auto justify-center">
+              Send Message
+            </button>
+          </form>
+
+          <div id="contact-success" class="hidden py-8 text-center text-emerald-600 font-medium">
+            ✓ Message sent successfully! Our team will respond within 2 business hours.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <ComplianceTrust />
+</Layout>
+
+<script>
+  const contactForm = document.getElementById('contact-page-form');
+  const contactSuccess = document.getElementById('contact-success');
+  if (contactForm && contactSuccess) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      contactForm.classList.add('hidden');
+      contactSuccess.classList.remove('hidden');
+    });
+  }
+</script>
