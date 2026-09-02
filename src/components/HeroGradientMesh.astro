@@ -1,57 +1,56 @@
 ---
+import { Image } from 'astro:assets';
+import heroImg from '../assets/hero.jpg';
 ---
 
-<section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+<section class="relative min-h-[540px] sm:min-h-[600px] flex items-center pt-20 pb-24 md:pt-28 md:pb-32 overflow-hidden bg-slate-950">
   
-  <!-- Atmospheric Gradient Mesh Backdrop -->
-  <div class="gradient-mesh-hero"></div>
+  <!-- Hero Background Image with Lightened Gradient Overlay -->
+  <div class="absolute inset-0 z-0">
+    <Image 
+      src={heroImg} 
+      alt="Medical Software Platform Backdrop" 
+      class="w-full h-full object-cover object-center opacity-65 filter brightness-95 saturate-[1.1]"
+      loading="eager"
+    />
+    <!-- Lightened Soft Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/35 to-slate-950/60"></div>
+  </div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-4xl mx-auto">
-      
-      <!-- Subdued Pill Tag -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-primary-bg-subdued-hover)]/70 text-[var(--color-primary-deep)] text-xs font-semibold uppercase tracking-wider mb-6 border border-[var(--color-primary-soft)]/20 shadow-xs">
-        <span class="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse"></span>
-        Intelligent Revenue Cycle Management
-      </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+    
+    <!-- Medical Software Pill Tag -->
+    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-400/30 text-sky-300 text-xs font-medium uppercase tracking-wider mb-4 backdrop-blur-md shadow-md">
+      <span class="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse"></span>
+      <span>Intelligent Medical Software Platform</span>
+    </div>
 
-      <!-- Display XXL Headline -->
-      <h1 class="font-display-xxl text-3xl sm:text-5xl md:text-6xl text-[var(--color-ink)] mb-4 sm:mb-6 tracking-tight">
-        Transforming Healthcare Operations Through <span class="text-[var(--color-primary)] font-normal italic">Intelligent RCM</span>
-      </h1>
+    <!-- Clean, High-Impact Medical Software Headline -->
+    <h1 class="text-2xl sm:text-4xl md:text-5xl font-light text-white tracking-tight leading-[1.15] mb-4">
+      Advanced Medical Software for <br class="hidden sm:inline" />
+      <span class="font-semibold text-sky-400">Modern Healthcare Practices</span>
+    </h1>
 
-      <!-- Body Lead Text -->
-      <p class="text-base sm:text-xl font-light text-[var(--color-ink-secondary)] leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
-        We partner with medical practices, hospitals, and healthcare organizations to accelerate collections, eliminate claim denials, and optimize financial outcomes with technology-driven revenue solutions.
-      </p>
+    <!-- Medical Software Subtitle -->
+    <p class="text-sm sm:text-base md:text-lg font-light text-slate-300 leading-relaxed mb-8 max-w-2xl mx-auto">
+      We Destine provides powerful healthcare software solutions designed to automate clinical billing workflows, simplify practice management, and optimize revenue performance.
+    </p>
 
-      <!-- CTA Buttons -->
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
-        <button onclick="document.getElementById('audit-modal')?.classList.remove('hidden'); document.getElementById('audit-modal')?.classList.add('flex')" class="btn-primary-pill text-sm sm:text-base py-3 px-6 w-full sm:w-auto cursor-pointer">
-          <span>Schedule Practice Audit</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </button>
-
-        <a href="/contact" class="btn-secondary-pill text-sm sm:text-base py-3 px-6 w-full sm:w-auto">
-          <span>Calculate Revenue Impact</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[var(--color-primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-            <line x1="8" y1="6" x2="16" y2="6"></line>
-            <line x1="16" y1="14" x2="16" y2="18"></line>
-            <line x1="16" y1="10" x2="16" y2="10"></line>
-            <line x1="12" y1="10" x2="12" y2="10"></line>
-            <line x1="8" y1="10" x2="8" y2="10"></line>
-            <line x1="12" y1="14" x2="12" y2="14"></line>
-            <line x1="8" y1="14" x2="8" y2="14"></line>
-            <line x1="12" y1="18" x2="12" y2="18"></line>
-            <line x1="8" y1="18" x2="8" y2="18"></line>
-          </svg>
-        </a>
-      </div>
+    <!-- Single Main CTA Button -->
+    <div class="flex justify-center">
+      <button 
+        onclick="document.getElementById('audit-modal')?.classList.remove('hidden'); document.getElementById('audit-modal')?.classList.add('flex')" 
+        class="px-8 py-3.5 rounded-full bg-sky-500 hover:bg-sky-400 text-white font-medium text-base shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 transition-all duration-200 cursor-pointer flex items-center gap-2.5 group"
+      >
+        <span>Request Software Demo</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
     </div>
 
   </div>
 </section>
+
+
+
