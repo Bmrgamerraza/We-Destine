@@ -16,7 +16,7 @@
       </p>
     </div>
 
-    <div class="max-w-5xl mx-auto bg-white rounded-2xl border border-[var(--color-hairline)] shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+    <div class="max-w-5xl mx-auto bg-[var(--color-card-bg)] rounded-2xl border border-[var(--color-hairline)] shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
       
       <!-- Calculator Inputs (7 cols) -->
       <div class="p-6 sm:p-10 lg:col-span-7 flex flex-col justify-between">
@@ -27,14 +27,14 @@
             <label class="block text-xs font-semibold uppercase tracking-wider text-[var(--color-ink-mute)] mb-3">
               1. Select Practice Type
             </label>
-            <div class="grid grid-cols-3 gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <button type="button" data-type="medical" class="calc-type-btn active py-2.5 px-3 text-xs sm:text-sm rounded-lg border text-center font-medium transition-all border-[var(--color-primary)] bg-[var(--color-primary-bg-subdued-hover)]/30 text-[var(--color-primary-deep)] cursor-pointer">
                 Medical Practice
               </button>
-              <button type="button" data-type="dental" class="calc-type-btn py-2.5 px-3 text-xs sm:text-sm rounded-lg border text-center font-medium transition-all border-[var(--color-hairline)] bg-white text-[var(--color-ink-secondary)] hover:border-gray-300 cursor-pointer">
+              <button type="button" data-type="dental" class="calc-type-btn py-2.5 px-3 text-xs sm:text-sm rounded-lg border text-center font-medium transition-all border-[var(--color-hairline)] bg-[var(--color-card-bg)] text-[var(--color-ink-secondary)] hover:border-gray-400 cursor-pointer">
                 Dental / DSO
               </button>
-              <button type="button" data-type="hospital" class="calc-type-btn py-2.5 px-3 text-xs sm:text-sm rounded-lg border text-center font-medium transition-all border-[var(--color-hairline)] bg-white text-[var(--color-ink-secondary)] hover:border-gray-300 cursor-pointer">
+              <button type="button" data-type="hospital" class="calc-type-btn py-2.5 px-3 text-xs sm:text-sm rounded-lg border text-center font-medium transition-all border-[var(--color-hairline)] bg-[var(--color-card-bg)] text-[var(--color-ink-secondary)] hover:border-gray-400 cursor-pointer">
                 Hospital System
               </button>
             </div>
@@ -215,10 +215,10 @@
     btn.addEventListener('click', (e) => {
       typeBtns.forEach(b => {
         b.classList.remove('border-[var(--color-primary)]', 'bg-[var(--color-primary-bg-subdued-hover)]/30', 'text-[var(--color-primary-deep)]');
-        b.classList.add('border-[var(--color-hairline)]', 'bg-white', 'text-[var(--color-ink-secondary)]');
+        b.classList.add('border-[var(--color-hairline)]', 'bg-[var(--color-card-bg)]', 'text-[var(--color-ink-secondary)]');
       });
       const target = e.currentTarget as HTMLButtonElement;
-      target.classList.remove('border-[var(--color-hairline)]', 'bg-white', 'text-[var(--color-ink-secondary)]');
+      target.classList.remove('border-[var(--color-hairline)]', 'bg-[var(--color-card-bg)]', 'text-[var(--color-ink-secondary)]');
       target.classList.add('border-[var(--color-primary)]', 'bg-[var(--color-primary-bg-subdued-hover)]/30', 'text-[var(--color-primary-deep)]');
 
       const type = target.dataset.type;

@@ -9,7 +9,7 @@ const trustBadges = [
 ];
 ---
 
-<section class="py-20 bg-white relative border-t border-[var(--color-hairline)]">
+<section class="py-20 bg-[var(--color-canvas)] relative border-t border-[var(--color-hairline)]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-14">
@@ -27,7 +27,7 @@ const trustBadges = [
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {trustBadges.map(badge => (
         <div class="p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] flex items-start gap-4">
-          <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 text-lg font-bold">
+          <div class="w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 text-lg font-bold border border-emerald-500/20">
             🛡️
           </div>
           <div>

@@ -1,7 +1,7 @@
 ---
 ---
 
-<section class="py-20 bg-white relative border-t border-[var(--color-hairline)]">
+<section class="py-20 bg-[var(--color-canvas)] relative border-t border-[var(--color-hairline)]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-14">
@@ -17,12 +17,12 @@
     </div>
 
     <!-- Composited Dark Dashboard Container (DESIGN.md specification) -->
-    <div class="dark-dashboard-shell rounded-2xl overflow-hidden p-6 sm:p-10 text-white shadow-2xl">
+    <div class="dark-dashboard-shell rounded-2xl overflow-hidden p-4 sm:p-6 md:p-10 text-white shadow-2xl">
       
       <!-- Top Nav Bar in Dashboard Shell -->
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-white/10 pb-6 mb-8 gap-4">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-[var(--color-primary)] flex items-center justify-center font-bold text-white shadow-md">
+          <div class="w-10 h-10 rounded-xl bg-[var(--color-primary)] flex items-center justify-center font-bold text-white shadow-md shrink-0">
             WD
           </div>
           <div>
@@ -31,14 +31,14 @@
           </div>
         </div>
 
-        <div class="flex items-center gap-2">
-          <button class="dash-tab active px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white/10 text-white border border-white/10 cursor-pointer">
+        <div class="flex items-center gap-2 overflow-x-auto max-w-full pb-1 sm:pb-0">
+          <button class="dash-tab active px-3.5 py-1.5 rounded-lg text-xs font-medium bg-white/10 text-white border border-white/10 cursor-pointer whitespace-nowrap">
             Overview
           </button>
-          <button class="dash-tab px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition-colors cursor-pointer">
+          <button class="dash-tab px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition-colors cursor-pointer whitespace-nowrap">
             Denial Heatmap
           </button>
-          <button class="dash-tab px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition-colors cursor-pointer">
+          <button class="dash-tab px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white transition-colors cursor-pointer whitespace-nowrap">
             A/R Bucket Velocity
           </button>
         </div>
@@ -50,7 +50,7 @@
         <!-- Left Stats & Charts (8 cols) -->
         <div class="lg:col-span-8 space-y-6">
           
-          <div class="grid grid-cols-3 gap-4 font-tabular">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-tabular">
             <div class="p-4 rounded-xl bg-white/5 border border-white/10">
               <div class="text-xs text-slate-400 font-light mb-1">Total Collections MTD</div>
               <div class="text-2xl sm:text-3xl font-light text-white">$1,248,930</div>

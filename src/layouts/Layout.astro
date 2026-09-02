@@ -47,6 +47,18 @@ const {
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+		<!-- Anti-FOUC Theme Script -->
+		<script is:inline>
+			(function() {
+				const savedTheme = localStorage.getItem('theme');
+				if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+					document.documentElement.classList.add('dark');
+				} else {
+					document.documentElement.classList.remove('dark');
+				}
+			})();
+		</script>
 	</head>
 	<body class="min-h-screen flex flex-col bg-[var(--color-canvas)] text-[var(--color-ink)] selection:bg-[var(--color-primary-bg-subdued-hover)] selection:text-[var(--color-primary-deep)]">
 		<Header />

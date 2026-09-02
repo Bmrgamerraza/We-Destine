@@ -81,7 +81,7 @@ const steps = [
 ];
 ---
 
-<section id="workflow" class="py-20 bg-white relative">
+<section id="workflow" class="py-20 bg-[var(--color-canvas)] relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="text-center max-w-3xl mx-auto mb-16">
@@ -105,7 +105,7 @@ const steps = [
           class={`workflow-step-tab p-3.5 rounded-xl border text-left transition-all cursor-pointer ${
             index === 0 
               ? 'border-[var(--color-primary)] bg-[var(--color-primary-bg-subdued-hover)]/20 shadow-xs' 
-              : 'border-[var(--color-hairline)] hover:border-gray-300 bg-white'
+              : 'border-[var(--color-hairline)] hover:border-gray-400 bg-[var(--color-card-bg)]'
           }`}
         >
           <div class="flex items-center justify-between mb-1">
@@ -149,7 +149,7 @@ const steps = [
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {step.highlights.map(item => (
                 <div class="flex items-start gap-2.5 text-sm text-[var(--color-ink)] font-light">
-                  <div class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                  <div class="w-5 h-5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-500/20">
                     ✓
                   </div>
                   <span>{item}</span>
@@ -159,7 +159,7 @@ const steps = [
           </div>
 
           <!-- Right Visual Panel (5 cols) -->
-          <div class="lg:col-span-5 bg-white border border-[var(--color-hairline)] rounded-xl p-6 shadow-md">
+          <div class="lg:col-span-5 bg-[var(--color-card-bg)] border border-[var(--color-hairline)] rounded-xl p-6 shadow-md">
             <div class="text-xs font-semibold uppercase tracking-wider text-[var(--color-ink-mute)] mb-4 flex items-center justify-between">
               <span>Operational Metric</span>
               <span class="font-mono text-emerald-500">Live SLA</span>
@@ -168,21 +168,21 @@ const steps = [
             <div class="p-4 rounded-lg bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] mb-4 font-tabular">
               <div class="text-xs text-[var(--color-ink-mute)] mb-1">Target Speed SLA</div>
               <div class="text-2xl font-light text-[var(--color-ink)]">Under 24 Hours</div>
-              <div class="text-xs text-emerald-600 mt-1">✓ Automated 99.8% of encounters</div>
+              <div class="text-xs text-emerald-600 dark:text-emerald-400 mt-1">✓ Automated 99.8% of encounters</div>
             </div>
 
             <div class="space-y-3 font-tabular text-xs">
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-500">Payer API Direct Sync</span>
-                <span class="font-medium text-emerald-600">Active</span>
+              <div class="flex justify-between items-center py-2 border-b border-[var(--color-hairline)]">
+                <span class="text-[var(--color-ink-mute)]">Payer API Direct Sync</span>
+                <span class="font-medium text-emerald-600 dark:text-emerald-400">Active</span>
               </div>
-              <div class="flex justify-between items-center py-2 border-b border-gray-100">
-                <span class="text-gray-500">Coder Certification</span>
-                <span class="font-medium text-gray-800">AAPC / AHIMA</span>
+              <div class="flex justify-between items-center py-2 border-b border-[var(--color-hairline)]">
+                <span class="text-[var(--color-ink-mute)]">Coder Certification</span>
+                <span class="font-medium text-[var(--color-ink)]">AAPC / AHIMA</span>
               </div>
               <div class="flex justify-between items-center py-2">
-                <span class="text-gray-500">HIPAA Data Security</span>
-                <span class="font-medium text-gray-800">256-Bit Encrypted</span>
+                <span class="text-[var(--color-ink-mute)]">HIPAA Data Security</span>
+                <span class="font-medium text-[var(--color-ink)]">256-Bit Encrypted</span>
               </div>
             </div>
 
@@ -207,9 +207,9 @@ const steps = [
     tab.addEventListener('click', () => {
       tabs.forEach(t => {
         t.classList.remove('border-[var(--color-primary)]', 'bg-[var(--color-primary-bg-subdued-hover)]/20', 'shadow-xs');
-        t.classList.add('border-[var(--color-hairline)]', 'bg-white');
+        t.classList.add('border-[var(--color-hairline)]', 'bg-[var(--color-card-bg)]');
       });
-      tab.classList.remove('border-[var(--color-hairline)]', 'bg-white');
+      tab.classList.remove('border-[var(--color-hairline)]', 'bg-[var(--color-card-bg)]');
       tab.classList.add('border-[var(--color-primary)]', 'bg-[var(--color-primary-bg-subdued-hover)]/20', 'shadow-xs');
 
       panels.forEach((panel, pIdx) => {

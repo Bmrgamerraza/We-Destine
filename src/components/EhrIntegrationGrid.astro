@@ -31,14 +31,14 @@ const integrations = [
     </div>
 
     <!-- Filter Buttons -->
-    <div class="flex items-center justify-center gap-3 mb-10">
+    <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
       <button type="button" data-filter="all" class="ehr-filter-btn active px-4 py-2 text-xs sm:text-sm rounded-full border transition-all cursor-pointer font-medium border-[var(--color-primary)] bg-[var(--color-primary)] text-white shadow-xs">
         All Systems
       </button>
-      <button type="button" data-filter="medical" class="ehr-filter-btn px-4 py-2 text-xs sm:text-sm rounded-full border transition-all cursor-pointer font-medium border-[var(--color-hairline)] bg-white text-[var(--color-ink-secondary)] hover:border-gray-300">
+      <button type="button" data-filter="medical" class="ehr-filter-btn px-4 py-2 text-xs sm:text-sm rounded-full border transition-all cursor-pointer font-medium border-[var(--color-hairline)] bg-[var(--color-card-bg)] text-[var(--color-ink-secondary)] hover:border-gray-400">
         Medical EHRs
       </button>
-      <button type="button" data-filter="dental" class="ehr-filter-btn px-4 py-2 text-xs sm:text-sm rounded-full border transition-all cursor-pointer font-medium border-[var(--color-hairline)] bg-white text-[var(--color-ink-secondary)] hover:border-gray-300">
+      <button type="button" data-filter="dental" class="ehr-filter-btn px-4 py-2 text-xs sm:text-sm rounded-full border transition-all cursor-pointer font-medium border-[var(--color-hairline)] bg-[var(--color-card-bg)] text-[var(--color-ink-secondary)] hover:border-gray-400">
         Dental & DSO Systems
       </button>
     </div>
@@ -46,12 +46,12 @@ const integrations = [
     <!-- Grid Cards -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {integrations.map(item => (
-        <div data-cat={item.category} class="ehr-card bg-white border border-[var(--color-hairline)] rounded-xl p-5 hover:shadow-md hover:border-[var(--color-primary-soft)]/50 transition-all">
+        <div data-cat={item.category} class="ehr-card bg-[var(--color-card-bg)] border border-[var(--color-hairline)] rounded-xl p-5 hover:shadow-md hover:border-[var(--color-primary-soft)]/50 transition-all">
           <div class="flex items-center justify-between mb-3">
             <div class="w-8 h-8 rounded-lg bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] flex items-center justify-center text-[var(--color-primary-deep)] font-bold text-xs">
               ⚡
             </div>
-            <span class="font-tabular text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
+            <span class="font-tabular text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
               Verified Sync
             </span>
           </div>
@@ -64,7 +64,7 @@ const integrations = [
             {item.type}
           </div>
 
-          <div class="pt-3 border-t border-gray-100 flex items-center gap-1.5 text-[11px] text-[var(--color-primary-deep)] font-light">
+          <div class="pt-3 border-t border-[var(--color-hairline)] flex items-center gap-1.5 text-[11px] text-[var(--color-primary-deep)] font-light">
             <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)]"></span>
             <span>{item.status}</span>
           </div>
@@ -73,9 +73,9 @@ const integrations = [
     </div>
 
     <!-- Bottom FHIR & HL7 Banner -->
-    <div class="mt-10 p-6 bg-white border border-[var(--color-hairline)] rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="mt-10 p-6 bg-[var(--color-card-bg)] border border-[var(--color-hairline)] rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-[var(--color-primary-bg-subdued-hover)]/40 flex items-center justify-center text-[var(--color-primary)] font-semibold">
+        <div class="w-10 h-10 rounded-full bg-[var(--color-primary-bg-subdued-hover)]/40 flex items-center justify-center text-[var(--color-primary)] font-semibold shrink-0">
           🔌
         </div>
         <div>
@@ -100,9 +100,9 @@ const integrations = [
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => {
         b.classList.remove('border-[var(--color-primary)]', 'bg-[var(--color-primary)]', 'text-white', 'shadow-xs');
-        b.classList.add('border-[var(--color-hairline)]', 'bg-white', 'text-[var(--color-ink-secondary)]');
+        b.classList.add('border-[var(--color-hairline)]', 'bg-[var(--color-card-bg)]', 'text-[var(--color-ink-secondary)]');
       });
-      btn.classList.remove('border-[var(--color-hairline)]', 'bg-white', 'text-[var(--color-ink-secondary)]');
+      btn.classList.remove('border-[var(--color-hairline)]', 'bg-[var(--color-card-bg)]', 'text-[var(--color-ink-secondary)]');
       btn.classList.add('border-[var(--color-primary)]', 'bg-[var(--color-primary)]', 'text-white', 'shadow-xs');
 
       const filter = (btn as HTMLButtonElement).dataset.filter;
