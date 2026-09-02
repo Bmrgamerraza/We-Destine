@@ -48,8 +48,8 @@ const integrations = [
       {integrations.map(item => (
         <div data-cat={item.category} class="ehr-card bg-[var(--color-card-bg)] border border-[var(--color-hairline)] rounded-xl p-4 sm:p-5 hover:shadow-md hover:border-[var(--color-primary-soft)]/50 transition-all">
           <div class="flex items-center justify-between mb-3">
-            <div class="w-8 h-8 rounded-lg bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] flex items-center justify-center text-[var(--color-primary-deep)] font-bold text-xs">
-              ⚡
+            <div class="w-8 h-8 rounded-lg bg-[var(--color-primary-bg-subdued-hover)]/40 border border-[var(--color-hairline)] flex items-center justify-center text-[var(--color-primary-deep)] font-bold text-xs">
+              <svg class="w-4 h-4 text-[var(--color-primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             </div>
             <span class="font-tabular text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
               Verified Sync
@@ -76,7 +76,7 @@ const integrations = [
     <div class="mt-10 p-6 bg-[var(--color-card-bg)] border border-[var(--color-hairline)] rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-full bg-[var(--color-primary-bg-subdued-hover)]/40 flex items-center justify-center text-[var(--color-primary)] font-semibold shrink-0">
-          🔌
+          <svg class="w-5 h-5 text-[var(--color-primary)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a6 6 0 0 1-12 0V8z"/></svg>
         </div>
         <div>
           <div class="font-medium text-sm text-[var(--color-ink)]">Custom / Proprietary EHR System?</div>

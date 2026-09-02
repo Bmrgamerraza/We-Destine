@@ -6,31 +6,31 @@
   --breakpoint-xxs: 20rem; /* 320px */
   --breakpoint-xs: 24rem;  /* 384px */
   
-  --color-primary: #533afd;
-  --color-primary-deep: #4434d4;
-  --color-primary-press: #2e2b8c;
-  --color-primary-soft: #665efd;
-  --color-primary-bg-subdued-hover: #b9b9f9;
+  --color-primary: #0284c7;
+  --color-primary-deep: #0369a1;
+  --color-primary-press: #075985;
+  --color-primary-soft: #0ea5e9;
+  --color-primary-bg-subdued-hover: #e0f2fe;
   
-  --color-brand-dark-900: #1c1e54;
+  --color-brand-dark-900: #0f172a;
   
-  --color-ink: #0d253d;
-  --color-ink-secondary: #273951;
-  --color-ink-mute: #64748d;
-  --color-ink-mute-2: #61718a;
+  --color-ink: #0f172a;
+  --color-ink-secondary: #334155;
+  --color-ink-mute: #64748b;
+  --color-ink-mute-2: #64748b;
   
   --color-canvas: #ffffff;
-  --color-canvas-soft: #f6f9fc;
-  --color-canvas-cream: #f5e9d4;
+  --color-canvas-soft: #f8fafc;
+  --color-canvas-cream: #f0f9ff;
   
-  --color-hairline: #e3e8ee;
-  --color-hairline-input: #a8c3de;
-  --color-header-bg: rgba(255, 255, 255, 0.85);
+  --color-hairline: #e2e8f0;
+  --color-hairline-input: #cbd5e1;
+  --color-header-bg: rgba(255, 255, 255, 0.88);
   --color-card-bg: #ffffff;
   
-  --color-ruby: #ea2261;
-  --color-magenta: #f96bee;
-  --color-lemon: #9b6829;
+  --color-ruby: #e11d48;
+  --color-magenta: #0284c7;
+  --color-lemon: #0369a1;
   
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
@@ -43,15 +43,15 @@ html.dark, .dark {
   
   --color-canvas: #0b0f19;
   --color-canvas-soft: #111827;
-  --color-canvas-cream: #1a1625;
+  --color-canvas-cream: #0f172a;
   
   --color-hairline: #1e293b;
   --color-hairline-input: #334155;
-  --color-header-bg: rgba(11, 15, 25, 0.85);
+  --color-header-bg: rgba(11, 15, 25, 0.88);
   --color-card-bg: #1e293b;
   
-  --color-primary-bg-subdued-hover: rgba(83, 58, 253, 0.25);
-  --color-primary-deep: #818cf8;
+  --color-primary-bg-subdued-hover: rgba(2, 132, 199, 0.25);
+  --color-primary-deep: #38bdf8;
 }
 
 @layer base {
@@ -128,7 +128,7 @@ html.dark, .dark {
   background-color: var(--color-primary);
   color: #ffffff;
   font-size: 0.9375rem;
-  font-weight: 400;
+  font-weight: 500;
   padding: 0.5rem 1.125rem;
   border-radius: 9999px;
   display: inline-flex;
@@ -136,13 +136,13 @@ html.dark, .dark {
   justify-content: center;
   gap: 0.5rem;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 10px rgba(83, 58, 253, 0.25);
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.25);
 }
 
 .btn-primary-pill:hover {
   background-color: var(--color-primary-deep);
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(83, 58, 253, 0.35);
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
 }
 
 .btn-primary-pill:active {
@@ -152,10 +152,10 @@ html.dark, .dark {
 
 .btn-secondary-pill {
   background-color: var(--color-card-bg);
-  color: var(--color-primary-soft);
+  color: var(--color-primary-deep);
   border: 1px solid var(--color-hairline-input);
   font-size: 0.9375rem;
-  font-weight: 400;
+  font-weight: 500;
   padding: 0.5rem 1.125rem;
   border-radius: 9999px;
   display: inline-flex;
@@ -165,9 +165,13 @@ html.dark, .dark {
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.dark .btn-secondary-pill {
+  color: var(--color-primary-soft);
+}
+
 .btn-secondary-pill:hover {
   border-color: var(--color-primary);
-  background-color: rgba(83, 58, 253, 0.08);
+  background-color: rgba(2, 132, 199, 0.08);
   transform: translateY(-1px);
 }
 
@@ -175,7 +179,7 @@ html.dark, .dark {
   background-color: var(--color-brand-dark-900);
   color: #ffffff;
   font-size: 0.9375rem;
-  font-weight: 400;
+  font-weight: 500;
   padding: 0.5rem 1.125rem;
   border-radius: 9999px;
   display: inline-flex;
@@ -191,7 +195,7 @@ html.dark, .dark {
 }
 
 .btn-dark-pill:hover {
-  background-color: #272a6b;
+  background-color: #1e293b;
   transform: translateY(-1px);
 }
 
@@ -199,7 +203,7 @@ html.dark, .dark {
   background-color: #475569;
 }
 
-/* Gradient Mesh Hero Background */
+/* Clinical Medical Backdrop */
 .gradient-mesh-hero {
   position: absolute;
   top: 0;
@@ -209,19 +213,17 @@ html.dark, .dark {
   z-index: 0;
   pointer-events: none;
   background: 
-    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(245, 233, 212, 0.75) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(249, 107, 238, 0.25) 0%, transparent 65%),
-    radial-gradient(ellipse 90% 70% at 85% -15%, rgba(83, 58, 253, 0.28) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 40% at 70% 25%, rgba(234, 34, 97, 0.15) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(224, 242, 254, 0.85) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(186, 230, 253, 0.5) 0%, transparent 65%),
+    radial-gradient(ellipse 90% 70% at 85% -15%, rgba(2, 132, 199, 0.15) 0%, transparent 70%);
   filter: blur(40px);
 }
 
 .dark .gradient-mesh-hero {
   background: 
-    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(83, 58, 253, 0.35) 0%, transparent 60%),
-    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(147, 51, 234, 0.25) 0%, transparent 65%),
-    radial-gradient(ellipse 90% 70% at 85% -15%, rgba(30, 58, 138, 0.4) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 40% at 70% 25%, rgba(236, 72, 153, 0.15) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(2, 132, 199, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(15, 118, 110, 0.2) 0%, transparent 65%),
+    radial-gradient(ellipse 90% 70% at 85% -15%, rgba(30, 58, 138, 0.35) 0%, transparent 70%);
 }
 
 .gradient-mesh-subtle {
@@ -229,16 +231,16 @@ html.dark, .dark {
   inset: 0;
   pointer-events: none;
   background: 
-    radial-gradient(circle at 10% 20%, rgba(83, 58, 253, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(245, 233, 212, 0.4) 0%, transparent 50%);
+    radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(240, 249, 255, 0.4) 0%, transparent 50%);
 }
 
 /* Glassmorphism & Surface Depth */
 .glass-card {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(16px);
   border: 1px solid var(--color-hairline);
-  box-shadow: rgba(0, 55, 112, 0.06) 0 1px 3px, rgba(0, 55, 112, 0.04) 0 8px 24px;
+  box-shadow: rgba(15, 23, 42, 0.04) 0 1px 3px, rgba(15, 23, 42, 0.03) 0 8px 24px;
 }
 
 .dark .glass-card {
@@ -250,6 +252,7 @@ html.dark, .dark {
 .dark-dashboard-shell {
   background-color: var(--color-brand-dark-900);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: rgba(0, 55, 112, 0.25) 0 16px 48px, rgba(0, 0, 0, 0.3) 0 4px 12px;
+  box-shadow: rgba(2, 132, 199, 0.15) 0 16px 48px, rgba(0, 0, 0, 0.3) 0 4px 12px;
 }
+
 
