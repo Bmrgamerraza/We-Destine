@@ -1,6 +1,50 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ComplianceTrust from '../components/ComplianceTrust.astro';
+
+const corePillars = [
+  {
+    title: 'AI-Powered Claim Scrubbing',
+    description: 'Our proprietary engine pre-scrubs every claim against 45,000+ payer rules prior to submission, reducing initial rejections to under 1.4%.',
+    icon: `<path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>`
+  },
+  {
+    title: 'Certified Specialty Coders',
+    description: '100% US-based AAPC and AHIMA certified coders specialized in cardiology, orthopedics, dental, oncology, and multi-specialty practices.',
+    icon: `<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>`
+  },
+  {
+    title: 'Bi-Directional EHR Integration',
+    description: 'Seamless integration with Epic, Cerner, AthenaHealth, Dentrix, eClinicalWorks, and 50+ major health system platforms.',
+    icon: `<path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/>`
+  },
+  {
+    title: 'Dedicated Denial Analysts',
+    description: 'Proactive denial resolution teams working aged receivables and appealing zero-pays within 48 hours of ERA posting.',
+    icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>`
+  }
+];
+
+const leadershipTeam = [
+  {
+    name: 'Dr. Evelyn Vance, MD',
+    role: 'Chief Executive Officer & Founder',
+    credentials: 'Board Certified Internal Medicine • Former Health System CMO',
+    bio: 'Pioneered clinical revenue workflows and operational strategies across regional health networks before founding We Destine.'
+  },
+  {
+    name: 'Marcus Sterling',
+    role: 'Chief Technology Officer',
+    credentials: 'MS Computer Science (Stanford) • Former HealthTech AI Architect',
+    bio: 'Leads our machine learning software team, building high-speed claim scrubbers and real-time EHR API connectors.'
+  },
+  {
+    name: 'Sarah Jenkins, CPC, CPMA',
+    role: 'VP of Medical Coding & Compliance',
+    credentials: 'AAPC Certified Professional Coder & Auditor (18+ Yrs Exp)',
+    bio: 'Oversees 200+ certified medical and dental coders, ensuring strict HIPAA compliance and zero billing risk.'
+  }
+];
 ---
 
 <Layout 
@@ -8,6 +52,7 @@ import ComplianceTrust from '../components/ComplianceTrust.astro';
   description="Discover the mission, certified billing expertise, and technology architecture behind We Destine—transforming healthcare revenue cycle management nationwide."
   canonical="https://wedestine.com/about"
 >
+  <!-- Hero Section -->
   <section class="relative pt-16 pb-20 overflow-hidden bg-[var(--color-canvas-soft)] border-b border-[var(--color-hairline)]">
     <div class="gradient-mesh-hero"></div>
     
@@ -23,39 +68,148 @@ import ComplianceTrust from '../components/ComplianceTrust.astro';
       <p class="text-lg font-light text-[var(--color-ink-secondary)] leading-relaxed mb-8">
         We Destine was founded to eliminate administrative complexity for medical practices and health systems—ensuring healthcare providers are fairly and rapidly reimbursed for the vital care they deliver.
       </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="/contact" class="btn-primary-pill shadow-sm">
+          Speak with an Strategist
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button onclick="document.getElementById('audit-modal')?.classList.remove('hidden'); document.getElementById('audit-modal')?.classList.add('flex')" class="btn-secondary-pill cursor-pointer">
+          Request Practice Audit
+        </button>
+      </div>
     </div>
   </section>
 
+  <!-- Statistics Grid -->
+  <section class="py-12 bg-[var(--color-canvas)] border-b border-[var(--color-hairline)]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center font-tabular">
+        
+        <div class="p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
+          <div class="text-3xl sm:text-4xl font-light text-[var(--color-primary-deep)] mb-1">$1.2B+</div>
+          <div class="text-xs text-[var(--color-ink-mute)] font-sans">Healthcare Claims Processed</div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
+          <div class="text-3xl sm:text-4xl font-light text-emerald-600 dark:text-emerald-400 mb-1">98.6%</div>
+          <div class="text-xs text-[var(--color-ink-mute)] font-sans">First-Pass Clean Claim Target</div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
+          <div class="text-3xl sm:text-4xl font-light text-[var(--color-primary)] mb-1">99.4%</div>
+          <div class="text-xs text-[var(--color-ink-mute)] font-sans">Net Revenue Capture Rate</div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
+          <div class="text-3xl sm:text-4xl font-light text-[var(--color-brand-dark-900)] dark:text-white mb-1">100%</div>
+          <div class="text-xs text-[var(--color-ink-mute)] font-sans">US Certified Coders (AAPC)</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Story & Purpose -->
   <section class="py-20 bg-[var(--color-canvas)]">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-center font-tabular">
-        <div class="p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
-          <div class="text-4xl font-light text-[var(--color-primary-deep)] mb-1">$1.2B+</div>
-          <div class="text-xs text-[var(--color-ink-mute)]">Healthcare Claims Processed</div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-16">
+        <div class="md:col-span-7 space-y-6">
+          <h2 class="font-display-lg text-3xl sm:text-4xl text-[var(--color-ink)] font-normal">
+            Why We Built We Destine
+          </h2>
+          <p class="text-[var(--color-ink-secondary)] font-light leading-relaxed">
+            Healthcare billing has become increasingly fragmented. Complex payer policies, changing ICD-10/CPT/CDT coding guidelines, and rising patient deductibles have created record denial rates for practices across the nation.
+          </p>
+          <p class="text-[var(--color-ink-secondary)] font-light leading-relaxed">
+            We Destine combines proprietary AI claim-scrubbing technology with dedicated teams of specialty-certified coders and billing strategists. We act as a seamless extension of your practice—delivering enterprise-grade financial intelligence without software migration headaches.
+          </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
-          <div class="text-4xl font-light text-emerald-600 mb-1">98.6%</div>
-          <div class="text-xs text-[var(--color-ink-mute)]">First-Pass Clean Claim Target</div>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
-          <div class="text-4xl font-light text-[var(--color-brand-dark-900)] mb-1">100%</div>
-          <div class="text-xs text-[var(--color-ink-mute)]">US Accredited Coders</div>
+        <div class="md:col-span-5 p-8 rounded-2xl bg-[var(--color-canvas-cream)] border border-[var(--color-hairline)] space-y-4">
+          <div class="text-xs font-semibold uppercase tracking-wider text-[var(--color-primary-deep)]">
+            Our Promise to Providers
+          </div>
+          <h3 class="font-display-md text-xl text-[var(--color-ink)]">
+            "Zero Administrative Friction. Maximum Revenue Security."
+          </h3>
+          <p class="text-xs text-[var(--color-ink-secondary)] font-light leading-relaxed">
+            We believe physicians and healthcare staff should spend 100% of their energy delivering patient care—not fighting insurance claims or managing collection agency overhead.
+          </p>
         </div>
       </div>
 
-      <div class="prose prose-lg max-w-none text-[var(--color-ink-secondary)] font-light leading-relaxed space-y-6">
-        <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
-          Why We Built We Destine
+      <!-- Core Technology Pillars -->
+      <div class="mt-20">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="font-display-lg text-3xl text-[var(--color-ink)] mb-3">
+            Core Technology & Operational Pillars
+          </h2>
+          <p class="text-sm font-light text-[var(--color-ink-secondary)]">
+            Built from the ground up to solve complex revenue leaks for hospitals, medical practices, and DSOs.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          {corePillars.map(pillar => (
+            <div class="p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] space-y-3">
+              <div class="w-10 h-10 rounded-xl bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] flex items-center justify-center">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fragment set:html={pillar.icon} />
+              </div>
+              <h3 class="font-medium text-lg text-[var(--color-ink)]">{pillar.title}</h3>
+              <p class="text-sm text-[var(--color-ink-secondary)] font-light leading-relaxed">{pillar.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Leadership Section -->
+      <div class="mt-24">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <h2 class="font-display-lg text-3xl text-[var(--color-ink)] mb-3">
+            Leadership & Executive Team
+          </h2>
+          <p class="text-sm font-light text-[var(--color-ink-secondary)]">
+            Engineers, certified coders, and health system executives working together.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {leadershipTeam.map(member => (
+            <div class="p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] space-y-3">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-deep)] flex items-center justify-center text-white font-medium text-lg shadow-sm">
+                {member.name.charAt(0)}
+              </div>
+              <div>
+                <h3 class="font-medium text-base text-[var(--color-ink)]">{member.name}</h3>
+                <div class="text-xs text-[var(--color-primary)] font-medium">{member.role}</div>
+              </div>
+              <div class="text-[11px] font-tabular text-emerald-600 dark:text-emerald-400">{member.credentials}</div>
+              <p class="text-xs text-[var(--color-ink-secondary)] font-light leading-relaxed pt-2 border-t border-[var(--color-hairline)]">
+                {member.bio}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Bottom CTA Banner -->
+      <div class="mt-20 p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-[var(--color-brand-dark-900)] to-slate-900 text-white text-center space-y-6 shadow-xl">
+        <h2 class="font-display-lg text-2xl sm:text-3xl text-white font-normal max-w-2xl mx-auto">
+          Ready to Elevate Your Practice Financial Clean-Rate?
         </h2>
-        <p>
-          Healthcare billing has become increasingly fragmented. Complex payer policies, changing ICD-10/CPT coding guidelines, and rising patient deductibles have created record denial rates for practices across the nation.
+        <p class="text-slate-300 text-sm font-light max-w-xl mx-auto">
+          Schedule a complimentary revenue cycle audit with our senior RCM strategists today and discover hidden claim bottlenecks.
         </p>
-        <p>
-          We Destine combines proprietary AI claim-scrubbing technology with dedicated teams of specialty-certified coders and billing strategists. We act as a seamless extension of your practice—delivering enterprise-grade financial intelligence without software migration headaches.
-        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/contact" class="btn-primary-pill text-sm py-3 px-8">
+            Contact We Destine Team
+          </a>
+          <a href="/medical-rcm" class="btn-secondary-pill text-sm py-3 px-8 text-white border-slate-700 hover:bg-slate-800">
+            Explore RCM Solutions
+          </a>
+        </div>
       </div>
 
     </div>

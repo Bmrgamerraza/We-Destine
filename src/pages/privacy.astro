@@ -1,0 +1,243 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ComplianceTrust from '../components/ComplianceTrust.astro';
+
+const sections = [
+  { id: 'overview', title: '1. Executive Overview & Scope' },
+  { id: 'hipaa-baa', title: '2. HIPAA & Business Associate Agreement' },
+  { id: 'data-collected', title: '3. Information We Collect' },
+  { id: 'use-of-info', title: '4. How We Use Your Information' },
+  { id: 'security', title: '5. Data Security & Encryption Architecture' },
+  { id: 'cookies', title: '6. Cookies & Tracking Technologies' },
+  { id: 'third-parties', title: '7. Third-Party Integrations & Subprocessors' },
+  { id: 'retention-rights', title: '8. Data Retention & Provider/Patient Rights' },
+  { id: 'updates-contact', title: '9. Updates & Privacy Officer Contact' },
+];
+---
+
+<Layout 
+  title="Privacy Policy | We Destine - Healthcare RCM Data Protection & HIPAA"
+  description="Read the official Privacy Policy of We Destine Inc. Discover how we protect Protected Health Information (PHI), enforce HIPAA standards, and secure healthcare financial data."
+  canonical="https://wedestine.com/privacy"
+>
+  <!-- Hero Section -->
+  <section class="relative pt-16 pb-20 overflow-hidden bg-[var(--color-canvas-soft)] border-b border-[var(--color-hairline)]">
+    <div class="gradient-mesh-hero"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] text-xs font-semibold uppercase tracking-wider mb-4">
+        Legal & Compliance
+      </div>
+
+      <h1 class="font-display-xxl text-4xl sm:text-5xl text-[var(--color-ink)] mb-6">
+        Privacy Policy
+      </h1>
+
+      <p class="text-lg font-light text-[var(--color-ink-secondary)] leading-relaxed mb-4">
+        We Destine Inc. ("We Destine", "we", "us", or "our") is dedicated to protecting patient privacy, maintaining robust data security, and safeguarding Protected Health Information (PHI) in full accordance with HIPAA, HITECH, and federal standards.
+      </p>
+
+      <div class="text-xs font-tabular text-[var(--color-ink-mute)]">
+        <span>Effective Date: <strong>September 2, 2026</strong></span>
+        <span class="mx-2">•</span>
+        <span>Version 3.4 (HIPAA & BAA Verified)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section with Sidebar -->
+  <section class="py-16 sm:py-20 bg-[var(--color-canvas)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Sticky Navigation Sidebar (Desktop) -->
+        <aside class="hidden lg:block lg:col-span-4">
+          <div class="sticky top-28 space-y-6 p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
+            <h3 class="font-medium text-xs uppercase tracking-wider text-[var(--color-ink)]">
+              Table of Contents
+            </h3>
+            <nav class="space-y-2 text-xs font-light">
+              {sections.map(section => (
+                <a 
+                  href={`#${section.id}`} 
+                  class="block text-[var(--color-ink-secondary)] hover:text-[var(--color-primary)] transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-[var(--color-primary)]"
+                >
+                  {section.title}
+                </a>
+              ))}
+            </nav>
+
+            <div class="pt-4 border-t border-[var(--color-hairline)]">
+              <div class="p-4 rounded-xl bg-[var(--color-canvas-cream)] border border-[var(--color-hairline)] text-xs space-y-2">
+                <div class="font-medium text-[var(--color-ink)] flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  HIPAA Officer Contact
+                </div>
+                <p class="text-[var(--color-ink-mute)] font-light text-[11px]">
+                  Have a data privacy or BAA inquiry? Contact our dedicated compliance desk.
+                </p>
+                <a href="mailto:privacy@wedestine.com" class="block font-medium text-[var(--color-primary)] hover:underline text-[11px]">
+                  privacy@wedestine.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Privacy Policy Content -->
+        <div class="lg:col-span-8 space-y-12 text-[var(--color-ink-secondary)] leading-relaxed font-light">
+          
+          <!-- Section 1 -->
+          <div id="overview" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              1. Executive Overview & Scope
+            </h2>
+            <p>
+              This Privacy Policy explains how We Destine Inc. collects, uses, discloses, and safeguards personal data and Protected Health Information (PHI) when healthcare providers, medical billing specialists, dental practices, and patients utilize our Revenue Cycle Management (RCM) platform, website (<a href="https://wedestine.com" class="text-[var(--color-primary)] underline">wedestine.com</a>), or integrated EHR clearinghouse services.
+            </p>
+            <p>
+              By accessing our platform or contracting for We Destine RCM services, you agree to the data management practices described in this policy. If you represent a covered entity under HIPAA, your Business Associate Agreement (BAA) with We Destine governs PHI handling in conjunction with this Privacy Policy.
+            </p>
+          </div>
+
+          <!-- Section 2 -->
+          <div id="hipaa-baa" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              2. HIPAA & Business Associate Agreement (BAA)
+            </h2>
+            <div class="p-5 rounded-2xl bg-[var(--color-canvas-cream)] border border-[var(--color-hairline)] flex items-start gap-4">
+              <div class="p-2.5 rounded-xl bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary)] shrink-0">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              </div>
+              <div class="space-y-1 text-sm">
+                <div class="font-semibold text-[var(--color-ink)]">Strict BAA Execution Required</div>
+                <div class="text-xs text-[var(--color-ink-secondary)]">
+                  We Destine acts as a Business Associate under the Health Insurance Portability and Accountability Act (HIPAA) of 1996 for all healthcare provider clients. We execute standard HIPAA Business Associate Agreements prior to processing any Protected Health Information (PHI).
+                </div>
+              </div>
+            </div>
+            <p>
+              When handling PHI on behalf of healthcare clients, We Destine strictly adheres to the HIPAA Privacy, Security, and Breach Notification Rules. We process PHI solely to perform contracted RCM services, such as claim submission, payment posting, denial management, and financial reporting.
+            </p>
+          </div>
+
+          <!-- Section 3 -->
+          <div id="data-collected" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              3. Information We Collect
+            </h2>
+            <p>
+              We collect information directly from healthcare clients, integrated EHR/EMR platforms, clearinghouses, and site visitors:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong class="text-[var(--color-ink)]">Protected Health Information (PHI):</strong> Patient demographic data, insurance policy details, CPT/ICD-10 billing codes, claims status, Explanation of Benefits (EOB), and remittance data.</li>
+              <li><strong class="text-[var(--color-ink)]">Provider & Practice Credentials:</strong> NPI numbers, Tax ID numbers (TIN), practice addresses, authorized user login credentials, and practice administrator contact details.</li>
+              <li><strong class="text-[var(--color-ink)]">Technical & Telemetry Data:</strong> IP addresses, browser types, device IDs, access timestamps, and portal feature usage logs for auditing and security compliance.</li>
+              <li><strong class="text-[var(--color-ink)]">Inquiry & Communication Data:</strong> Information provided when filling out consultation forms, scheduling an audit, or corresponding with our support desk.</li>
+            </ul>
+          </div>
+
+          <!-- Section 4 -->
+          <div id="use-of-info" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              4. How We Use Your Information
+            </h2>
+            <p>
+              We Destine uses collected data strictly for legitimate operational and contracted purposes:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4 font-tabular text-sm">
+              <div class="p-4 rounded-xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] space-y-1">
+                <div class="font-medium text-[var(--color-ink)]">Claim Processing & Billing</div>
+                <div class="text-xs text-[var(--color-ink-mute)]">Scrubbing, transmitting, and reconciling electronic medical and dental claims with payers.</div>
+              </div>
+              <div class="p-4 rounded-xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] space-y-1">
+                <div class="font-medium text-[var(--color-ink)] font-sans">Denial AI & Analytics</div>
+                <div class="text-xs text-[var(--color-ink-mute)]">Predicting denial patterns and auditing revenue leakages for partner practices.</div>
+              </div>
+              <div class="p-4 rounded-xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] space-y-1">
+                <div class="font-medium text-[var(--color-ink)] font-sans">EHR Synchronization</div>
+                <div class="text-xs text-[var(--color-ink-mute)] font-sans">Bi-directional API sync of billing states and patient balances with client EHR systems.</div>
+              </div>
+              <div class="p-4 rounded-xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] space-y-1">
+                <div class="font-medium text-[var(--color-ink)] font-sans">Security & Compliance Auditing</div>
+                <div class="text-xs text-[var(--color-ink-mute)] font-sans">Maintaining immutable access logs to fulfill HIPAA Audit Trail mandates.</div>
+              </div>
+            </div>
+            <p>
+              <strong class="text-[var(--color-ink)]">We NEVER sell, rent, or commercialize PHI or practice data to third-party marketers.</strong>
+            </p>
+          </div>
+
+          <!-- Section 5 -->
+          <div id="security" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              5. Data Security & Encryption Architecture
+            </h2>
+            <p>
+              We Destine employs defense-in-depth security controls to ensure data confidentiality, integrity, and availability:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li><strong class="text-[var(--color-ink)]">Encryption in Transit & Rest:</strong> All data transmitted over public networks uses TLS 1.3 encryption. Stored PHI is encrypted using FIPS 140-2 validated AES-256 bit encryption.</li>
+              <li><strong class="text-[var(--color-ink)]">Access Control & MFA:</strong> Strict Role-Based Access Control (RBAC) and mandatory Multi-Factor Authentication (MFA) for all billing specialists and platform administrators.</li>
+              <li><strong class="text-[var(--color-ink)]">SOC 2 & Infrastructure Security:</strong> Hosted on SOC 2 Type II certified cloud infrastructure featuring automated vulnerability scanning, intrusion detection systems (IDS), and continuous audit logging.</li>
+            </ul>
+          </div>
+
+          <!-- Section 6 -->
+          <div id="cookies" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              6. Cookies & Tracking Technologies
+            </h2>
+            <p>
+              Our website uses essential first-party cookies and privacy-friendly telemetry to ensure site performance, store user theme preferences (light/dark mode), and maintain authorized portal session tokens. We do not place advertising tracking cookies or cross-site behavioral trackers on client portals.
+            </p>
+          </div>
+
+          <!-- Section 7 -->
+          <div id="third-parties" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              7. Third-Party Integrations & Subprocessors
+            </h2>
+            <p>
+              We Destine partners with accredited clearinghouses (e.g., Change Healthcare, Availity, DentalXChange) and secure cloud host providers to fulfill claim routing. All third-party subprocessors handling PHI undergo rigorous vendor security risk assessments and must execute HIPAA-compliant Business Associate Agreements.
+            </p>
+          </div>
+
+          <!-- Section 8 -->
+          <div id="retention-rights" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              8. Data Retention & Provider/Patient Rights
+            </h2>
+            <p>
+              We retain RCM financial records and audit trails in accordance with state statutory retention mandates (typically 7 to 10 years for medical billing records). Healthcare clients may request data export, audit log inspectability, or certified data purging upon contract termination in accordance with our Master Services Agreement.
+            </p>
+          </div>
+
+          <!-- Section 9 -->
+          <div id="updates-contact" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              9. Updates & Privacy Officer Contact
+            </h2>
+            <p>
+              We Destine reserves the right to update this Privacy Policy to reflect changing regulatory requirements or platform enhancements. Material updates will be communicated via client portal notices and updated timestamps on this page.
+            </p>
+            
+            <div class="mt-8 p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] space-y-3">
+              <h3 class="font-medium text-lg text-[var(--color-ink)]">Privacy & Compliance Desk</h3>
+              <p class="text-sm">For questions, privacy inquiries, or BAA requests, please reach out to our dedicated Chief Information Security & Compliance Officer:</p>
+              <div class="text-sm font-tabular space-y-1">
+                <div><strong>We Destine Inc. - Attn: Privacy Officer</strong></div>
+                <div>Email: <a href="mailto:privacy@wedestine.com" class="text-[var(--color-primary)] font-medium">privacy@wedestine.com</a></div>
+                <div>Compliance Line: 1-800-DESTINE (337-8463)</div>
+                <div>Website: <a href="https://wedestine.com" class="text-[var(--color-primary)]">https://wedestine.com</a></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ComplianceTrust />
+</Layout>

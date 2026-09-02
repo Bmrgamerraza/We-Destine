@@ -1,0 +1,213 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ComplianceTrust from '../components/ComplianceTrust.astro';
+
+const sections = [
+  { id: 'acceptance', title: '1. Acceptance & Agreement Scope' },
+  { id: 'services', title: '2. Scope of RCM Services & Platform License' },
+  { id: 'client-responsibilities', title: '3. Client Responsibilities & Data Accuracy' },
+  { id: 'hipaa-compliance', title: '4. HIPAA & Business Associate Obligations' },
+  { id: 'intellectual-property', title: '5. Intellectual Property Rights' },
+  { id: 'sla-availability', title: '6. Service Availability & Performance (SLA)' },
+  { id: 'fees-payment', title: '7. Service Fees, Collections & Payment Terms' },
+  { id: 'limitation-liability', title: '8. Limitation of Liability & Indemnification' },
+  { id: 'termination', title: '9. Term, Termination & Data Offboarding' },
+  { id: 'governing-law', title: '10. Governing Law & Dispute Resolution' },
+];
+---
+
+<Layout 
+  title="Terms & Conditions | We Destine - Healthcare RCM Service Agreement"
+  description="Review the Terms & Conditions and Master Services Agreement governing We Destine's intelligent healthcare revenue cycle management services and EHR integrations."
+  canonical="https://wedestine.com/terms"
+>
+  <!-- Hero Section -->
+  <section class="relative pt-16 pb-20 overflow-hidden bg-[var(--color-canvas-soft)] border-b border-[var(--color-hairline)]">
+    <div class="gradient-mesh-hero"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--color-primary-bg-subdued-hover)] text-[var(--color-primary-deep)] text-xs font-semibold uppercase tracking-wider mb-4">
+        Legal Framework
+      </div>
+
+      <h1 class="font-display-xxl text-4xl sm:text-5xl text-[var(--color-ink)] mb-6">
+        Terms & Conditions
+      </h1>
+
+      <p class="text-lg font-light text-[var(--color-ink-secondary)] leading-relaxed mb-4">
+        These Terms & Conditions govern your access to and use of We Destine Inc.'s revenue cycle management software, medical & dental billing services, and client portals.
+      </p>
+
+      <div class="text-xs font-tabular text-[var(--color-ink-mute)]">
+        <span>Effective Date: <strong>September 2, 2026</strong></span>
+        <span class="mx-2">•</span>
+        <span>Version 4.2 (Master Services Standard)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section with Sidebar -->
+  <section class="py-16 sm:py-20 bg-[var(--color-canvas)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Sticky Navigation Sidebar (Desktop) -->
+        <aside class="hidden lg:block lg:col-span-4">
+          <div class="sticky top-28 space-y-6 p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)]">
+            <h3 class="font-medium text-xs uppercase tracking-wider text-[var(--color-ink)]">
+              Terms Navigation
+            </h3>
+            <nav class="space-y-2 text-xs font-light">
+              {sections.map(section => (
+                <a 
+                  href={`#${section.id}`} 
+                  class="block text-[var(--color-ink-secondary)] hover:text-[var(--color-primary)] transition-colors py-1 pl-2 border-l-2 border-transparent hover:border-[var(--color-primary)]"
+                >
+                  {section.title}
+                </a>
+              ))}
+            </nav>
+
+            <div class="pt-4 border-t border-[var(--color-hairline)]">
+              <div class="p-4 rounded-xl bg-[var(--color-canvas-cream)] border border-[var(--color-hairline)] text-xs space-y-2">
+                <div class="font-medium text-[var(--color-ink)]">Legal Desk Direct Contact</div>
+                <p class="text-[var(--color-ink-mute)] font-light text-[11px]">
+                  For contractual inquiries, Enterprise SLAs, or custom SOW agreements:
+                </p>
+                <a href="mailto:legal@wedestine.com" class="block font-medium text-[var(--color-primary)] hover:underline text-[11px]">
+                  legal@wedestine.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Terms Content -->
+        <div class="lg:col-span-8 space-y-12 text-[var(--color-ink-secondary)] leading-relaxed font-light">
+          
+          <!-- Section 1 -->
+          <div id="acceptance" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              1. Acceptance & Agreement Scope
+            </h2>
+            <p>
+              By signing a We Destine Master Services Agreement (MSA), Statement of Work (SOW), or accessing the We Destine client portal, you ("Client", "Provider", or "User") agree to be bound by these Terms & Conditions. If you are accepting on behalf of a medical group, dental practice, hospital system, or DSO, you represent that you have full legal authority to bind that entity.
+            </p>
+          </div>
+
+          <!-- Section 2 -->
+          <div id="services" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              2. Scope of RCM Services & Platform License
+            </h2>
+            <p>
+              We Destine provides comprehensive revenue cycle management solutions including, but not limited to: electronic claim scrubbing and clearinghouse transmission, certified medical coding (ICD-10-CM/CPT/HCPCS/CDT), ERA/EOB payment posting, denial workflow management, patient statement delivery, and financial performance reporting.
+            </p>
+            <p>
+              We Destine grants Client a limited, non-exclusive, non-transferable, revocable license to access our proprietary web portals and APIs during the active term of service solely for internal clinical and financial administrative operations.
+            </p>
+          </div>
+
+          <!-- Section 3 -->
+          <div id="client-responsibilities" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              3. Client Responsibilities & Data Accuracy
+            </h2>
+            <p>
+              Client remains exclusively responsible for the clinical documentation, patient encounter accuracy, provider credentials, and medical necessity of all rendered services submitted to We Destine for billing. Client agrees to maintain active provider NPI and credentialing status with applicable commercial and government insurance payers (Medicare, Medicaid, TRICARE).
+            </p>
+          </div>
+
+          <!-- Section 4 -->
+          <div id="hipaa-compliance" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              4. HIPAA & Business Associate Obligations
+            </h2>
+            <div class="p-5 rounded-2xl bg-[var(--color-canvas-cream)] border border-[var(--color-hairline)] space-y-2">
+              <div class="font-semibold text-sm text-[var(--color-ink)] flex items-center gap-2">
+                <svg class="w-5 h-5 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                HIPAA Business Associate Agreement (BAA) Incorporation
+              </div>
+              <p class="text-xs text-[var(--color-ink-secondary)]">
+                The parties incorporate by reference the We Destine standard BAA. We Destine maintains administrative, physical, and technical safeguards complying with 45 C.F.R. Parts 160 and 164 (Subparts A and C).
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 5 -->
+          <div id="intellectual-property" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              5. Intellectual Property Rights
+            </h2>
+            <p>
+              All software, AI claim scrubbing algorithms, custom analytics dashboards, trade secrets, logos, and portal architecture remain the sole property of We Destine Inc. Client retains sole ownership of all raw practice data, patient records, and clinical files.
+            </p>
+          </div>
+
+          <!-- Section 6 -->
+          <div id="sla-availability" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              6. Service Availability & Performance (SLA)
+            </h2>
+            <p>
+              We Destine targets a monthly uptime commitment of 99.9% for portal access and API clearinghouse endpoints, excluding scheduled maintenance windows. Standard claim processing turnarounds are executed within 24 to 48 business hours from encounter receipt.
+            </p>
+          </div>
+
+          <!-- Section 7 -->
+          <div id="fees-payment" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              7. Service Fees, Collections & Payment Terms
+            </h2>
+            <p>
+              RCM service fees are calculated based on contracted percentage of net collections or flat monthly rates as specified in Client's Statement of Work. Invoices are billed monthly and payable within 15 calendar days. Late balances accrue interest at 1.5% per month or the maximum statutory rate allowed by law.
+            </p>
+          </div>
+
+          <!-- Section 8 -->
+          <div id="limitation-liability" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              8. Limitation of Liability & Indemnification
+            </h2>
+            <p>
+              To the maximum extent permitted by applicable law, neither party shall be liable for indirect, incidental, consequential, or punitive damages. We Destine's cumulative financial liability for any claims arising out of services shall not exceed the total fees paid by Client to We Destine during the six (6) months immediately preceding the event giving rise to liability.
+            </p>
+          </div>
+
+          <!-- Section 9 -->
+          <div id="termination" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              9. Term, Termination & Data Offboarding
+            </h2>
+            <p>
+              Either party may terminate services with 60 days' written notice, or immediately upon material breach following a 30-day cure period. Upon termination, We Destine will assist Client in exporting historical billing records and accounts receivable ledgers in standard EDI 835/837 or CSV format.
+            </p>
+          </div>
+
+          <!-- Section 10 -->
+          <div id="governing-law" class="scroll-mt-28 space-y-4">
+            <h2 class="font-display-lg text-2xl sm:text-3xl text-[var(--color-ink)] font-normal">
+              10. Governing Law & Dispute Resolution
+            </h2>
+            <p>
+              These Terms shall be governed by and construed in accordance with federal laws of the United States and state laws applicable to We Destine's corporate headquarters, without regard to conflict of law principles.
+            </p>
+
+            <div class="mt-8 p-6 rounded-2xl bg-[var(--color-canvas-soft)] border border-[var(--color-hairline)] space-y-3">
+              <h3 class="font-medium text-lg text-[var(--color-ink)]">Questions Regarding Terms?</h3>
+              <p class="text-sm">For contract modifications, corporate governance, or billing inquiries:</p>
+              <div class="text-sm font-tabular space-y-1">
+                <div><strong>We Destine Inc. - Corporate Legal Department</strong></div>
+                <div>Email: <a href="mailto:legal@wedestine.com" class="text-[var(--color-primary)] font-medium">legal@wedestine.com</a></div>
+                <div>Phone: 1-800-DESTINE (337-8463)</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ComplianceTrust />
+</Layout>
