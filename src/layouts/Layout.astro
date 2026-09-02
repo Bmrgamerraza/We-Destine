@@ -8,13 +8,58 @@ interface Props {
   title?: string;
   description?: string;
   canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  keywords?: string;
 }
 
 const {
-  title = "We Destine | Intelligent Healthcare Revenue Cycle Management",
-  description = "Transforming healthcare operations through intelligent revenue cycle management. We partner with medical practices, hospitals, and healthcare organizations to accelerate collections, reduce claim denials, and optimize financial outcomes.",
-  canonical = "https://wedestine.com"
+  title = "We Destine | Intelligent Healthcare Revenue Cycle Management & RCM Tool",
+  description = "We Destine is an intelligent revenue cycle management platform accelerating medical & dental collections, eliminating claim denials, and optimizing financial performance for practices nationwide.",
+  canonical = Astro.url.href,
+  ogImage = "https://wedestine.com/og-image.png",
+  ogType = "website",
+  keywords = "We Destine, We Destine RCM, Revenue Cycle Management, Medical Billing Tool, Dental RCM, Claim Denial Management, EHR Integration, Healthcare Financial Analytics"
 } = Astro.props;
+
+const siteUrl = "https://wedestine.com";
+
+const jsonLdOrganization = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "We Destine",
+  "url": siteUrl,
+  "logo": `${siteUrl}/favicon.svg`,
+  "description": "Intelligent healthcare revenue cycle management platform and medical billing solutions.",
+  "sameAs": [],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-800-337-8463",
+    "contactType": "customer service",
+    "areaServed": "US",
+    "availableLanguage": "English"
+  }
+};
+
+const jsonLdSoftware = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "We Destine RCM Platform",
+  "operatingSystem": "Web-based",
+  "applicationCategory": "HealthApplication",
+  "description": "We Destine is an end-to-end intelligent revenue cycle management tool designed for medical practices, hospitals, and dental support organizations (DSOs).",
+  "url": siteUrl,
+  "provider": {
+    "@type": "Organization",
+    "name": "We Destine"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free initial practice RCM audit"
+  }
+};
 ---
 
 <!doctype html>
@@ -25,28 +70,39 @@ const {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="canonical" href={canonical} />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#1e293b" />
 		
 		<!-- SEO Meta Tags -->
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<meta name="robots" content="index, follow" />
+		<meta name="keywords" content={keywords} />
+		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+		<meta name="author" content="We Destine" />
 
 		<!-- OpenGraph Meta Tags -->
+		<meta property="og:site_name" content="We Destine" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:type" content="website" />
+		<meta property="og:type" content={ogType} />
 		<meta property="og:url" content={canonical} />
-		<meta property="og:site_name" content="We Destine" />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:image:alt" content="We Destine - Intelligent Healthcare Revenue Cycle Management" />
+		<meta property="og:locale" content="en_US" />
 
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
 
 		<!-- Google Fonts: Inter -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+		<!-- JSON-LD Structured Data -->
+		<script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLdOrganization)} />
+		<script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLdSoftware)} />
 
 		<!-- Anti-FOUC Theme Script -->
 		<script is:inline>
