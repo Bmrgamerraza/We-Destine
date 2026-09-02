@@ -124,83 +124,88 @@ html.dark, .dark {
 }
 
 /* Pill Button Styles */
-.btn-primary-pill {
-  background-color: var(--color-primary);
-  color: #ffffff;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  padding: 0.5rem 1.125rem;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.25);
-}
+@layer components {
+  .btn-primary-pill {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.5rem 1.125rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 10px rgba(2, 132, 199, 0.25);
+    white-space: nowrap;
+  }
 
-.btn-primary-pill:hover {
-  background-color: var(--color-primary-deep);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
-}
+  .btn-primary-pill:hover {
+    background-color: var(--color-primary-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(2, 132, 199, 0.35);
+  }
 
-.btn-primary-pill:active {
-  background-color: var(--color-primary-press);
-  transform: translateY(0);
-}
+  .btn-primary-pill:active {
+    background-color: var(--color-primary-press);
+    transform: translateY(0);
+  }
 
-.btn-secondary-pill {
-  background-color: var(--color-card-bg);
-  color: var(--color-primary-deep);
-  border: 1px solid var(--color-hairline-input);
-  font-size: 0.9375rem;
-  font-weight: 500;
-  padding: 0.5rem 1.125rem;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
+  .btn-secondary-pill {
+    background-color: var(--color-card-bg);
+    color: var(--color-primary-deep);
+    border: 1px solid var(--color-hairline-input);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.5rem 1.125rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+  }
 
-.dark .btn-secondary-pill {
-  color: var(--color-primary-soft);
-}
+  .dark .btn-secondary-pill {
+    color: var(--color-primary-soft);
+  }
 
-.btn-secondary-pill:hover {
-  border-color: var(--color-primary);
-  background-color: rgba(2, 132, 199, 0.08);
-  transform: translateY(-1px);
-}
+  .btn-secondary-pill:hover {
+    border-color: var(--color-primary);
+    background-color: rgba(2, 132, 199, 0.08);
+    transform: translateY(-1px);
+  }
 
-.btn-dark-pill {
-  background-color: var(--color-brand-dark-900);
-  color: #ffffff;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  padding: 0.5rem 1.125rem;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  transition: all 0.2s ease;
-}
+  .btn-dark-pill {
+    background-color: var(--color-brand-dark-900);
+    color: #ffffff;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.5rem 1.125rem;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
 
-.dark .btn-dark-pill {
-  background-color: #334155;
-  border: 1px solid #475569;
-}
+  .dark .btn-dark-pill {
+    background-color: #334155;
+    border: 1px solid #475569;
+  }
 
-.btn-dark-pill:hover {
-  background-color: #1e293b;
-  transform: translateY(-1px);
-}
+  .btn-dark-pill:hover {
+    background-color: #1e293b;
+    transform: translateY(-1px);
+  }
 
-.dark .btn-dark-pill:hover {
-  background-color: #475569;
+  .dark .btn-dark-pill:hover {
+    background-color: #475569;
+  }
 }
 
 /* Clinical Medical Backdrop */
